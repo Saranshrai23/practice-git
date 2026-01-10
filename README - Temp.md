@@ -29,7 +29,19 @@ It also enforces **time-based job execution**, ensuring jobs run on agents durin
 | Agent 2 | RHEL   | Launch via SSH            | 2         | assgn2 |
 | Agent 3 | CentOS | Launch via SSH            | 3         | assgn3 |
 
+
+<img width="1910" height="953" alt="image" src="https://github.com/user-attachments/assets/084add1b-6435-42bd-83cd-c83a185cfe63" />
+
+<img width="1365" height="963" alt="image" src="https://github.com/user-attachments/assets/73d044ab-ea97-4ffb-a7c5-cd8bbbb0a90a" />
+
+<img width="1893" height="923" alt="image" src="https://github.com/user-attachments/assets/63d5bf7a-35ec-4a78-a22a-40ca3865a24f" />
+
+<img width="1915" height="838" alt="image" src="https://github.com/user-attachments/assets/f8f2e6e1-91d2-4168-9757-a9a0e642788d" />
+
+
+
 ---
+
 
 ## ⏰ Time-Based Execution Rule
 
