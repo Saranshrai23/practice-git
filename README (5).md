@@ -84,8 +84,10 @@ git branch -d feature-1
 ---
 ## Screenshots:
 ### * **Shell Script**
-<img width="1854" height="1168" alt="Pasted image" src="https://github.com/user-attachments/assets/56a0f761-57e7-469c-8dc3-6393ea8edb4a" />
-<img width="1854" height="1168" alt="Pasted image (2)" src="https://github.com/user-attachments/assets/efd656fa-ce5c-4776-91b6-502456b382f1" />
+![Assignement1_task1_code](https://github.com/user-attachments/assets/b7d67375-597a-44e2-92d3-d022848f01e0)
+![Assignement1_task1_code1](https://github.com/user-attachments/assets/701471a4-3e73-46cf-80c5-85bcd77f679b)
+
+
 
 ### * **Slack and email notification configuration**
 <img width="1854" height="1168" alt="Pasted image (3)" src="https://github.com/user-attachments/assets/5321be54-f224-430e-b007-5cda5c899eaf" />
