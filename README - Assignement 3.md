@@ -97,7 +97,13 @@ go list -m all > dependencies.txt
 * `coverage.out`
 * `coverage.html`
 * `dependencies.txt`
-* `pipeline.log`
+
+
+<img width="1912" height="955" alt="image" src="https://github.com/user-attachments/assets/9d1ab03d-f6b2-44b7-aec4-79b2758a8063" />
+
+<img width="1388" height="508" alt="image" src="https://github.com/user-attachments/assets/a84abf48-b7b7-46ba-97b9-4de012787c9e" />
+
+<img width="1903" height="747" alt="image" src="https://github.com/user-attachments/assets/5ab23cb1-0b92-417b-92fa-49f6cf8c203c" />
 
 ---
 
