@@ -233,7 +233,6 @@ Enable **Google Single Sign-On (SSO)** for **admin user access**.
 
 ### 📍 **Login via SSO**
 <img width="628" height="398" alt="Pasted image" src="https://github.com/user-attachments/assets/ac099f88-81a2-4ae4-863e-41b31a62c7bf" />
-<img width="628" height="398" alt="Pasted image (2)" src="https://github.com/user-attachments/assets/2e3547f6-ab74-461d-9f8b-772cf07a915e" />
 <img width="628" height="398" alt="Pasted image (3)" src="https://github.com/user-attachments/assets/c5d88959-9ed4-41aa-ad1d-b9cdc377fdaf" />
 
 ---
