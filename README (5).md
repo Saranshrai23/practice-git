@@ -220,7 +220,7 @@ cp ninja.txt /var/www/html/
 <img width="1402" height="653" alt="image" src="https://github.com/user-attachments/assets/8a2af2e0-b4fc-49cb-9a0b-2c02f86627a4" />
 
 
-### * **On success(localhost:8081)**
+### * **On success(localhost)**
 <img width="1918" height="920" alt="image" src="https://github.com/user-attachments/assets/f209158e-5269-4d0a-82d9-93e6b60a892a" />
 
 
