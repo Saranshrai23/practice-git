@@ -272,6 +272,11 @@ pytest \
 ✔️ DB & Redis tests skipped to avoid external dependency failures
 ✔️ Coverage generated successfully
 
+<img width="1096" height="792" alt="image" src="https://github.com/user-attachments/assets/324577e6-37d4-4fa4-a41c-da1bc273d636" />
+
+<img width="1918" height="866" alt="image" src="https://github.com/user-attachments/assets/ec9b7fc6-5c58-40f9-a9ec-4b96261ca999" />
+
+
 ---
 
 ### Artifacts Archived
