@@ -60,11 +60,12 @@ Additionally, there is **one Admin user** with full access.
 
 ### Administration
 
-* Ankita (Admin-Full access)
+* Saransh (Admin-Full access)
 
 📸 **Screenshots:**
 ### 📍 **Users**
- <img width="1854" height="1168" alt="Pasted image (10)" src="https://github.com/user-attachments/assets/0c3a9449-1a80-4b53-9899-83206d697569" />
+ <img width="1916" height="897" alt="image" src="https://github.com/user-attachments/assets/8f6968c9-ede9-4fec-b4a4-43a34944afb1" />
+
 
 ---
 
@@ -84,7 +85,8 @@ After reviewing all available strategies, the **Role-Based Authorization Strateg
 * ✅ Role-Based Strategy (Implemented)
 
 📸 **Screenshot:**
-<img width="1854" height="1168" alt="Pasted image" src="https://github.com/user-attachments/assets/6f94032b-a10d-4fae-b1b5-a6b2d60c0628" />
+<img width="1917" height="803" alt="image" src="https://github.com/user-attachments/assets/c6b054fa-eda9-47ae-ab39-ef372884711f" />
+
 
 
 
