@@ -20,6 +20,11 @@ The goal of this assignment is to understand **Jenkins Freestyle Jobs**, **Git o
 ### * **Global Configuration**
 <img width="1772" height="762" alt="image" src="https://github.com/user-attachments/assets/19b57c65-ca2f-4d4d-be91-e97ba4527431" />
 
+<img width="1212" height="792" alt="image" src="https://github.com/user-attachments/assets/c5534f47-55f7-405e-9900-4a18482e9d97" />
+
+<img width="1747" height="790" alt="image" src="https://github.com/user-attachments/assets/da4f6ad0-d3b4-44ef-a68c-57aaf9475b3e" />
+
+
 <img width="1908" height="965" alt="image" src="https://github.com/user-attachments/assets/56c5c727-a39d-413e-b2d3-dc393ceb8b7d" />
 
 
