@@ -142,12 +142,16 @@ Separate views were created to restrict visibility:
 
 📸 **Screenshots:**
 ### 📍 **Managing Roles**
-<img width="1809" height="668" alt="Pasted image" src="https://github.com/user-attachments/assets/bc8f4011-1637-4b64-8d2e-c1077e554f4d" />
-<img width="1809" height="668" alt="Pasted image (2)" src="https://github.com/user-attachments/assets/8a7cbfc8-2605-4e63-8613-a55e46cb0c7b" />
+<img width="940" height="403" alt="image" src="https://github.com/user-attachments/assets/626e63d3-36d4-42ee-b04a-2f4d7668c32b" />
+
+<img width="940" height="350" alt="image" src="https://github.com/user-attachments/assets/42521aee-aa81-44cc-87f6-5d4e66fa00d4" />
+
 
 ### 📍 **Assigning Roles**
-<img width="901" height="687" alt="Pasted image (3)" src="https://github.com/user-attachments/assets/d976cc09-6414-4876-bb43-e4d0f1158a4c" />
-<img width="901" height="687" alt="Pasted image (4)" src="https://github.com/user-attachments/assets/285bd3f3-f682-458b-a8d8-f1a798c86aa1" />
+<img width="615" height="691" alt="image" src="https://github.com/user-attachments/assets/7df0a752-2124-4559-9b8d-91f5a41b6f1f" />
+
+<img width="558" height="620" alt="image" src="https://github.com/user-attachments/assets/c4a96e02-59e3-47e1-976a-f5c0ed3a796c" />
+
 
 ---
 
@@ -181,29 +185,16 @@ Build Number: <build-number>
 ```
 
 📸 **Screenshot:**
-### 📍 **Jobs**
-<img width="1854" height="1168" alt="Pasted image" src="https://github.com/user-attachments/assets/0820d0ac-53dd-4aca-8b5c-c30f686dd464" />
+### 📍 **Jobs with different views**
+<img width="1066" height="233" alt="image" src="https://github.com/user-attachments/assets/a411573b-c44f-4673-9208-1d88f55d0cb4" />
+
+<img width="940" height="232" alt="image" src="https://github.com/user-attachments/assets/421293f3-d5ef-49d1-868f-cf01680b9aee" />
+
+<img width="940" height="237" alt="image" src="https://github.com/user-attachments/assets/021af469-7f00-4ae4-82ae-f7db00170dec" />
+
 
 ### 📍 **Console output**
 <img width="901" height="687" alt="image" src="https://github.com/user-attachments/assets/7ad8afdf-87c8-4950-acee-25a6b0c36c57" />
-
-📸 **Screenshot:**
-### 📍 **DevOps view**
-
-📍Dashboard:
-<img width="1854" height="1168" alt="7" src="https://github.com/user-attachments/assets/11cc33f8-3bdf-4408-8fbb-11e8341403fe" />
-
-📍Can build DevOps job 
-<img width="1854" height="1168" alt="Pasted image (2)" src="https://github.com/user-attachments/assets/ff490448-c43e-4192-a740-d425f16175f7" />
-
-📍Build Success
-<img width="1854" height="1168" alt="Pasted image (3)" src="https://github.com/user-attachments/assets/0c0a5c49-54d8-434e-bc37-3829d136f41e" />
-
-📍Build Success
-<img width="901" height="687" alt="8" src="https://github.com/user-attachments/assets/263e395c-812e-4cea-88d1-314b0619363f" />
-
-📍View mode of Tester via DevOps role
-<img width="1854" height="1168" alt="Pasted image (4)" src="https://github.com/user-attachments/assets/b4d73ac1-e18d-45d7-b0da-c0c2badb1a56" />
 
 
 ---
@@ -233,8 +224,7 @@ Enable **Google Single Sign-On (SSO)** for **admin user access**.
 
 📸 **Screenshots:**
 ### 📍 **Google Cloud Console**
-<img width="1854" height="1168" alt="Pasted image (2)" src="https://github.com/user-attachments/assets/4133d069-225a-4e24-8a04-44761d0d723d" />
-<img width="1854" height="1168" alt="Pasted image" src="https://github.com/user-attachments/assets/12f5f732-0ba6-47e2-9788-e9b510d87074" />
+<img width="940" height="444" alt="image" src="https://github.com/user-attachments/assets/1b364553-45bd-4553-b8df-f9b70c0d0999" />
 
 ### 📍 **Global Configuration**
 <img width="1854" height="1168" alt="Pasted image (3)" src="https://github.com/user-attachments/assets/46e37545-98e3-4068-ba4c-fa79b1330eb4" />
