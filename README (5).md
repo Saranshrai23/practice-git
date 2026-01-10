@@ -90,12 +90,17 @@ git branch -d feature-1
 
 
 ### * **Slack and email notification configuration**
-<img width="1854" height="1168" alt="Pasted image (3)" src="https://github.com/user-attachments/assets/5321be54-f224-430e-b007-5cda5c899eaf" />
+<img width="1918" height="957" alt="image" src="https://github.com/user-attachments/assets/abf610cd-d5d6-4cd9-a955-c888ab8a60c9" />
+
 
 
 ### * **On failure**
-<img width="1816" height="534" alt="Pasted image (4)" src="https://github.com/user-attachments/assets/0d47d89c-e08b-47ba-9043-8c4dfca6a833" />
-<img width="1816" height="659" alt="Pasted image (5)" src="https://github.com/user-attachments/assets/e9b32eac-9b08-4fa0-a36a-070bcd501950" />
+<img width="1913" height="697" alt="image" src="https://github.com/user-attachments/assets/ab2cfff0-0769-4ac7-ae0c-ef727b4aeb61" />
+<img width="1918" height="513" alt="image" src="https://github.com/user-attachments/assets/f9882bc1-b1e2-4597-9016-84b00e25f351" />
+<img width="1912" height="952" alt="image" src="https://github.com/user-attachments/assets/7251a9fb-9c65-4b5a-9c72-115b96f89403" />
+<img width="1400" height="312" alt="image" src="https://github.com/user-attachments/assets/ea21f876-d043-43bc-bdd8-6e59d94c78b8" />
+
+
 <img width="867" height="837" alt="Pasted image (6)" src="https://github.com/user-attachments/assets/efe025d2-f6b3-4d5d-a623-fbb4a0f3ab90" />
 
 ### * **On success**
