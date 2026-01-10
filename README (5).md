@@ -183,38 +183,46 @@ cp ninja.txt /var/www/html/
 ## Screenshots:
 
 ### * **Paramerterizing**
-<img width="1854" height="1168" alt="Pasted image (2)" src="https://github.com/user-attachments/assets/c367e6d7-ecb1-4111-97e7-850b56dda602" />
+<img width="1918" height="970" alt="image" src="https://github.com/user-attachments/assets/e80c52c2-b141-4bf1-ba59-15b127846ef9" />
+
 
 ### * **Shell Script and Archiving Artifact**
-<img width="1854" height="1168" alt="Pasted image (3)" src="https://github.com/user-attachments/assets/fac45fc5-b0f2-45cf-b785-3e00ae84fa9f" />
+<img width="1310" height="760" alt="image" src="https://github.com/user-attachments/assets/6b54ea8d-77a3-4a21-b4ed-4c52eb23b53c" />
 
 ### * **Slack and email notification configuration**
-<img width="1854" height="1168" alt="Pasted image (4 1)" src="https://github.com/user-attachments/assets/a1b8c2ef-be3f-4353-8116-cea92a6adedf" />
+<img width="1337" height="703" alt="image" src="https://github.com/user-attachments/assets/8631c23f-7d35-406d-89cb-0b25d1e76e64" />
+
 
 ### * **Building with Parameter**
-<img width="967" height="652" alt="Pasted image" src="https://github.com/user-attachments/assets/66dce427-965f-4c7d-b965-0530a0190a01" />
+<img width="1918" height="662" alt="image" src="https://github.com/user-attachments/assets/ccf62cc8-3ec0-4cea-8b61-76186ffaee87" />
 
 ### * **Downstream job trigger configuration**
-<img width="1854" height="1168" alt="Pasted image (5)" src="https://github.com/user-attachments/assets/851f85d1-a39e-4c4f-9d6b-f10cbe37fab1" />
+<img width="1895" height="762" alt="image" src="https://github.com/user-attachments/assets/10cb10aa-beef-4005-bf9b-16d66853015b" />
+
 
 ### * **Downstream job Shell Script**
-<img width="1854" height="1168" alt="Pasted image (6)" src="https://github.com/user-attachments/assets/fc977c3d-6dba-4c27-8d79-62846a0b011e" />
+<img width="1381" height="620" alt="image" src="https://github.com/user-attachments/assets/6d52aa4f-3817-4efc-88eb-d9c0d267e1a1" />
+
 
 ### * **On success (Downstream job)**
-<img width="1380" height="904" alt="Pasted image (7)" src="https://github.com/user-attachments/assets/b1945487-7376-4901-b458-410718e9cf02" />
+<img width="1887" height="966" alt="image" src="https://github.com/user-attachments/assets/33da312b-5aed-45a1-be4c-170873cb924e" />
+<img width="1903" height="831" alt="image" src="https://github.com/user-attachments/assets/e827888a-f95c-4e9a-9fbf-fc089fc270d2" />
 
-### * **On success**
-<img width="1380" height="457" alt="Pasted image (4)" src="https://github.com/user-attachments/assets/ff0cf4de-065a-42bb-9ecb-1c3d5192d243" />
-<img width="959" height="852" alt="Pasted image (5 1)" src="https://github.com/user-attachments/assets/86414729-9c43-47b8-b80a-7d1c8f3698fe" />
-<img width="959" height="448" alt="Pasted image (5 2)" src="https://github.com/user-attachments/assets/9d024d8e-63a8-4a43-a6a6-892cfa12120a" />
 
-### * **On failure**
-<img width="1375" height="489" alt="Pasted image (9)" src="https://github.com/user-attachments/assets/2acead0c-a019-4ac3-8183-d9304155ddb1" />
-<img width="954" height="846" alt="Pasted image (8)" src="https://github.com/user-attachments/assets/dbfa64c1-a0d1-4645-aaad-bb1813b396a9" />
-<img width="959" height="563" alt="Pasted image (10)" src="https://github.com/user-attachments/assets/237b80b8-6da4-4f8f-8d9e-79cea16d6080" />
+### * **On Failure**
+<img width="1916" height="883" alt="image" src="https://github.com/user-attachments/assets/5512b771-6b32-43b9-8a45-628cb5c9ad46" />
+<img width="1402" height="653" alt="image" src="https://github.com/user-attachments/assets/2d22587e-8c6d-4701-9db3-1a1cacd14420" />
+
+
+### * **On Success**
+<img width="1918" height="746" alt="image" src="https://github.com/user-attachments/assets/3764ede9-7d99-48c5-b295-9432a363685b" />
+
+<img width="1402" height="653" alt="image" src="https://github.com/user-attachments/assets/8a2af2e0-b4fc-49cb-9a0b-2c02f86627a4" />
+
 
 ### * **On success(localhost:8081)**
-<img width="817" height="455" alt="image" src="https://github.com/user-attachments/assets/0e44f924-2592-4100-ab1d-d1e559148344" />
+<img width="1918" height="920" alt="image" src="https://github.com/user-attachments/assets/f209158e-5269-4d0a-82d9-93e6b60a892a" />
+
 
 
 ## ✅ Final Outcome
