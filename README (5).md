@@ -101,12 +101,15 @@ git branch -d feature-1
 <img width="1400" height="312" alt="image" src="https://github.com/user-attachments/assets/ea21f876-d043-43bc-bdd8-6e59d94c78b8" />
 
 
-<img width="867" height="837" alt="Pasted image (6)" src="https://github.com/user-attachments/assets/efe025d2-f6b3-4d5d-a623-fbb4a0f3ab90" />
 
 ### * **On success**
-<img width="1195" height="1004" alt="Pasted image (7)" src="https://github.com/user-attachments/assets/22d1d8f3-4183-4ba1-9368-2f0e477aff09" />
-<img width="1195" height="448" alt="Pasted image (8)" src="https://github.com/user-attachments/assets/8e7c488e-05c1-4413-9c6b-73b595580615" />
-<img width="1195" height="828" alt="Pasted image (9)" src="https://github.com/user-attachments/assets/9d7c90b7-4274-4656-86a1-19bf565eb2f0" />
+![Assignement1_task1](https://github.com/user-attachments/assets/0a457b9a-e728-42d4-961d-e9607532eac5)
+<img width="1918" height="943" alt="image" src="https://github.com/user-attachments/assets/4d3a153c-bcc3-4691-a353-585d94c2f621" />
+<img width="1553" height="256" alt="image" src="https://github.com/user-attachments/assets/a73e8593-679e-4d53-87d3-12064bab85a7" />
+<img width="1547" height="646" alt="image" src="https://github.com/user-attachments/assets/bb5a5eb5-cddc-4e18-a41a-c55432384f36" />
+<img width="1402" height="452" alt="image" src="https://github.com/user-attachments/assets/e0af886d-097b-44bc-8fa3-df8a9d80d31d" />
+
+
 
 ---
 
