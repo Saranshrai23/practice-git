@@ -38,6 +38,9 @@ It also enforces **time-based job execution**, ensuring jobs run on agents durin
 
 <img width="1915" height="838" alt="image" src="https://github.com/user-attachments/assets/f8f2e6e1-91d2-4168-9757-a9a0e642788d" />
 
+## To create connection between master and nodes - we need to add SSH plugin and go to credentials >> add++ key
+
+<img width="1907" height="622" alt="image" src="https://github.com/user-attachments/assets/1bebb2e3-8d04-415c-9ca3-c442db90eacd" />
 
 
 ---
