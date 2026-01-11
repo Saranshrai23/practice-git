@@ -174,8 +174,13 @@ pipeline {
 }
 
 ```
-
 ---
+
+<img width="1918" height="903" alt="image" src="https://github.com/user-attachments/assets/1e5735ef-fd2e-4ce3-af7f-41b028a5b523" />
+
+<img width="1918" height="952" alt="image" src="https://github.com/user-attachments/assets/ae241ef3-0a8e-4cb5-bf97-7f654b6dd2c3" />
+
+
 
 ## 🧠 Explanation (Declarative)
 
