@@ -180,6 +180,7 @@ pipeline {
 
 <img width="1918" height="952" alt="image" src="https://github.com/user-attachments/assets/ae241ef3-0a8e-4cb5-bf97-7f654b6dd2c3" />
 
+<img width="1918" height="781" alt="image" src="https://github.com/user-attachments/assets/b30f5c35-6ba6-41f5-8a81-7df51bd21bba" />
 
 
 ## 🧠 Explanation (Declarative)
