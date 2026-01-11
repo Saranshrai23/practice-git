@@ -69,7 +69,7 @@ pipeline {
 
     tools {
         jdk 'JDK8'
-        maven 'Maven-3.8.7'
+        maven 'mvn3'   // EXACT name as configured in Jenkins
     }
 
     parameters {
@@ -79,15 +79,33 @@ pipeline {
     }
 
     environment {
-        SLACK_CHANNEL = '#jenkins-assignment'
-        EMAIL_TO = 'askankita19@gmail.com'
+        SLACK_CHANNEL = '#saransh_notification'
+        EMAIL_TO = 'saranshrai07@gmail.com'
     }
 
     stages {
 
+        stage('Clean Workspace') {
+            steps {
+                deleteDir()
+            }
+        }
+
         stage('Code Checkout') {
             steps {
-                git 'https://github.com/opstree/spring3hibernate.git'
+                git branch: 'master',
+                    url: 'https://github.com/opstree/spring3hibernate.git'
+            }
+        }
+
+        stage('Verify POM') {
+            steps {
+                sh '''
+                  echo "Current directory:"
+                  pwd
+                  echo "Listing files:"
+                  ls -l
+                '''
             }
         }
 
@@ -97,6 +115,7 @@ pipeline {
                 stage('Code Stability') {
                     when { expression { params.RUN_STABILITY_SCAN } }
                     steps {
+                        echo 'Running Code Stability Scan'
                         sh 'mvn clean compile || true'
                     }
                 }
@@ -104,6 +123,7 @@ pipeline {
                 stage('Code Quality Analysis') {
                     when { expression { params.RUN_QUALITY_SCAN } }
                     steps {
+                        echo 'Running Code Quality Analysis'
                         sh 'mvn verify || true'
                     }
                 }
@@ -111,12 +131,8 @@ pipeline {
                 stage('Code Coverage Analysis') {
                     when { expression { params.RUN_COVERAGE_SCAN } }
                     steps {
+                        echo 'Running Code Coverage'
                         sh 'mvn test || true'
-                    }
-                    post {
-                        always {
-                            jacoco execPattern: '**/target/jacoco.exec'
-                        }
                     }
                 }
             }
@@ -139,16 +155,16 @@ pipeline {
     post {
         success {
             slackSend channel: env.SLACK_CHANNEL,
-                      message: "✅ SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}"
+                      message: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}"
 
-            emailext subject: "SUCCESS: Jenkins Build ${env.JOB_NAME}",
-                     body: "Build successful. Artifacts published.",
+            emailext subject: " SUCCESS: Jenkins Build ${env.JOB_NAME}",
+                     body: "Build successful. Artifact published.",
                      to: env.EMAIL_TO
         }
 
         failure {
             slackSend channel: env.SLACK_CHANNEL,
-                      message: "❌ FAILURE: ${env.JOB_NAME} #${env.BUILD_NUMBER}"
+                      message: " FAILURE: ${env.JOB_NAME} #${env.BUILD_NUMBER}"
 
             emailext subject: "FAILED: Jenkins Build ${env.JOB_NAME}",
                      body: "Build failed. Please check Jenkins logs.",
@@ -156,6 +172,7 @@ pipeline {
         }
     }
 }
+
 ```
 
 ---
