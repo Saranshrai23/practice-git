@@ -81,6 +81,92 @@ This logic is implemented using shell scripting and verified via console output.
 * Night-time execution confirmed on **master**
 * Build status: **SUCCESS**
 
+
+<img width="1918" height="890" alt="image" src="https://github.com/user-attachments/assets/c5dd9264-30e1-4bd4-97da-a0a279100618" />
+
+```groovy
+pipeline {
+    agent none
+
+    triggers {
+        cron('H/15 * * * *')   // runs every 15 minutes
+    }
+
+    stages {
+        stage('Decide Agent & Run Script') {
+            steps {
+                script {
+                    // Get current hour (0–23)
+                    def hour = new Date().format("H", TimeZone.getTimeZone("Asia/Kolkata")) as int
+
+                    // Decide node
+                    def selectedNode
+                    if (hour >= 9 && hour < 18) {
+                        selectedNode = 'ubuntu-agent'
+                    } else {
+                        selectedNode = 'master'
+                    }
+
+                    echo "Current hour: ${hour}"
+                    echo "Running on node: ${selectedNode}"
+
+                    node(selectedNode) {
+
+                        stage('Git Assignment Script') {
+                            sh '''
+                            set -e
+
+                            echo "===== GIT ASSIGNMENT START ====="
+
+                            rm -rf git_assignment
+                            mkdir git_assignment
+                            cd git_assignment
+
+                            git init
+                            git config user.name "Jenkins"
+                            git config user.email "jenkins@example.com"
+
+                            echo "this is my first file" > file1
+                            git add .
+                            git commit -m "first file"
+
+                            git branch devops
+                            git branch ninja
+
+                            git switch devops
+                            echo "file 2 created" > file2
+                            git add .
+                            git commit -m "file 2"
+
+                            git switch ninja
+                            echo "file 3 created" > file3
+                            git add .
+                            git commit -m "file 3 added"
+
+                            git checkout master
+                            git merge devops
+
+                            git switch ninja
+                            git rebase master
+
+                            git branch -d devops
+
+                            echo "Final branches:"
+                            git branch -a
+
+                            echo "===== GIT ASSIGNMENT END ====="
+                            '''
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+```
+
+
 ---
 
 ## 🔹 Part 2 – RHEL Agent (Assignment 4 – Part 2)
