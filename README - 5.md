@@ -202,7 +202,7 @@ pipeline {
 node {
 
     env.JAVA_HOME = tool 'JDK8'
-    env.MAVEN_HOME = tool 'Maven-3.8.7'
+    env.MAVEN_HOME = tool 'mvn3'
     env.PATH = "${env.MAVEN_HOME}/bin:${env.JAVA_HOME}/bin:${env.PATH}"
 
     properties([
@@ -213,8 +213,8 @@ node {
         ])
     ])
 
-    def SLACK_CHANNEL = '#jenkins-assignment'
-    def EMAIL_TO = 'askankita19@gmail.com'
+    def SLACK_CHANNEL = '#saransh_notification'
+    def EMAIL_TO = 'globallearnerden@gmail.com'
 
     try {
 
@@ -222,13 +222,12 @@ node {
             git 'https://github.com/opstree/spring3hibernate.git'
         }
 
+        stage('Build') {
+            sh 'mvn clean package -DskipTests'
+        }
+
         stage('Parallel Code Analysis') {
             parallel(
-                "Code Stability": {
-                    if (params.RUN_STABILITY_SCAN) {
-                        sh 'mvn clean compile || true'
-                    }
-                },
                 "Code Quality Analysis": {
                     if (params.RUN_QUALITY_SCAN) {
                         sh 'mvn verify || true'
@@ -237,7 +236,6 @@ node {
                 "Code Coverage Analysis": {
                     if (params.RUN_COVERAGE_SCAN) {
                         sh 'mvn test || true'
-                        jacoco execPattern: '**/target/jacoco.exec'
                     }
                 }
             )
@@ -248,7 +246,6 @@ node {
         }
 
         stage('Publish Artifacts') {
-            sh 'mvn package'
             archiveArtifacts artifacts: '**/target/*.war', fingerprint: true
         }
 
@@ -271,9 +268,15 @@ node {
         throw err
     }
 }
+
 ```
 
 ---
+
+<img width="1897" height="923" alt="image" src="https://github.com/user-attachments/assets/ece6f1ce-0236-498c-a1d6-d0e7812da39d" />
+
+<img width="1410" height="182" alt="image" src="https://github.com/user-attachments/assets/cf6bfa18-c6aa-4152-9378-0b51a33d203f" />
+
 
 ## 🔄 Declarative vs Scripted Comparison
 
