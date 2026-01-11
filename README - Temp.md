@@ -200,6 +200,51 @@ Day time (9 AM - 6 PM IST) -> run on agent
 * Executor limit enforced
 * Build status: **SUCCESS**
 
+
+<img width="1915" height="906" alt="image" src="https://github.com/user-attachments/assets/b5da1253-b57b-4cf0-9bf4-6b369380d368" />
+
+<img width="1896" height="928" alt="image" src="https://github.com/user-attachments/assets/bede6ad8-def4-46b1-a100-b4ade4d94847" />
+
+
+```groovy
+pipeline {
+    agent none
+
+    triggers {
+        cron('H/15 * * * *')   // runs every 15 minutes
+    }
+
+    stages {
+        stage('Decide Node & Run Job') {
+            steps {
+                script {
+                    // Current hour in IST
+                    def hour = new Date().format("H", TimeZone.getTimeZone("Asia/Kolkata")) as int
+
+                    def selectedNode
+                    if (hour >= 9 && hour < 18) {
+                        selectedNode = 'rhel-agent'
+                    } else {
+                        selectedNode = 'master'
+                    }
+
+                    echo "Current hour: ${hour}"
+                    echo "Selected node: ${selectedNode}"
+
+                    node(selectedNode) {
+                        stage('Echo Job Details') {
+                            sh '''
+                            echo "Job Name: $JOB_NAME"
+                            echo "Build Number: $BUILD_NUMBER"
+                            '''
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 ---
 
 ## 🔹 Part 3 – CentOS Agent (Assignment 4 – Part 3)
@@ -252,6 +297,67 @@ Artifacts include:
 * Archival of test coverage reports
 * Jenkins UI displays downloadable artifacts
 * Successful builds recorded with permalinks
+
+<img width="1908" height="892" alt="image" src="https://github.com/user-attachments/assets/20b21e24-3774-455c-9c34-d73bc8c0f1f8" />
+
+<img width="1917" height="948" alt="image" src="https://github.com/user-attachments/assets/37cd758c-eb22-4cec-bed2-7b8f5a9fe592" />
+
+
+```groovy
+
+pipeline {
+    agent none
+
+    stages {
+        stage('Run Job Based on Time') {
+            steps {
+                script {
+
+                    def hour = new Date().format("H", TimeZone.getTimeZone("Asia/Kolkata")) as int
+                    def nodeName = (hour >= 9 && hour < 18) ? 'Agent 3 - Amazon Linux 2' : 'master'
+
+                    echo "IST Hour: ${hour}"
+                    echo "Running on: ${nodeName}"
+
+                    node(nodeName) {
+
+                        // ✅ Proper workspace cleanup
+                        deleteDir()
+
+                        // ✅ Git checkout (main branch)
+                        sh '''
+                        git clone -b main https://github.com/OT-MICROSERVICES/employee-api .
+                        '''
+
+                        // Credential Scan
+                        sh '''
+                        gitleaks detect --source . --report-path gitleaks-report.json || true
+                        '''
+
+                        // Test & Coverage
+                        sh '''
+                        go test ./... -coverprofile=coverage.out
+                        go tool cover -html=coverage.out -o coverage.html
+                        '''
+
+                        // Dependency list
+                        sh '''
+                        go list -m all > dependencies.txt
+                        '''
+
+                        // ✅ Archive artifacts INSIDE node
+                        archiveArtifacts artifacts: '''
+                            gitleaks-report.json,
+                            coverage.out,
+                            coverage.html,
+                            dependencies.txt
+                        ''', allowEmptyArchive: true
+                    }
+                }
+            }
+        }
+    }
+}
 
 ---
 
