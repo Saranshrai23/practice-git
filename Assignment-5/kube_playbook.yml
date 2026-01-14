@@ -1,0 +1,10 @@
+---
+- name: Install Kubernetes using role
+  hosts: k8s
+  become: yes
+  vars:
+    kubernetes_version: "v1.30"
+    pod_network_cidr: "192.168.0.0/16"
+
+  roles:
+    - kube-role

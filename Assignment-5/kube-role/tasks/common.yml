@@ -1,0 +1,18 @@
+---
+- name: Disable swap
+  command: swapoff -a
+  when: ansible_swaptotal_mb > 0
+
+- name: Comment swap entry in fstab
+  replace:
+    path: /etc/fstab
+    regexp: '^([^#].* swap .*)'
+    replace: '# \1'
+
+- name: Enable IP forwarding
+  sysctl:
+    name: net.ipv4.ip_forward
+    value: 1
+    state: present
+    reload: yes
+

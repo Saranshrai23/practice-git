@@ -1,0 +1,23 @@
+---
+- name: Add Kubernetes repository
+  yum_repository:
+    name: kubernetes
+    description: Kubernetes Official Repository   # 🔥 REQUIRED
+    baseurl: https://pkgs.k8s.io/core:/stable:/{{ kubernetes_version }}/rpm/
+    enabled: yes
+    gpgcheck: yes
+    gpgkey: https://pkgs.k8s.io/core:/stable:/{{ kubernetes_version }}/rpm/repodata/repomd.xml.key
+
+- name: Install Kubernetes packages
+  yum:
+    name:
+      - kubelet
+      - kubeadm
+      - kubectl
+    state: present
+
+- name: Enable kubelet
+  systemd:
+    name: kubelet
+    enabled: yes
+

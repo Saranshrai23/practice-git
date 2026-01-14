@@ -1,0 +1,12 @@
+---
+- name: Common Kubernetes prerequisites
+  include_tasks: common.yml
+
+- name: Ubuntu / Debian tasks
+  include_tasks: ubuntu.yml
+  when: ansible_os_family == "Debian"
+
+- name: RedHat tasks
+  include_tasks: redhat.yml
+  when: ansible_os_family == "RedHat"
+
