@@ -1,5 +1,9 @@
 [k8s_master]
-master ansible_host=13.127.28.250 ansible_user=ec2-user ansible_ssh_private_key_file=/home/saransh/.ssh/ubantu_key.pem ansible_python_interpreter=/usr/bin/python3
+master ansible_host=43.205.240.125 ansible_user=ec2-user ansible_ssh_private_key_file=/home/saransh/.ssh/ubantu_key.pem ansible_python_interpreter=/usr/bin/python3
+
+[k8s_worker]
+ubuntu_node ansible_host=3.111.168.112 ansible_user=ubuntu ansible_ssh_private_key_file=/home/saransh/.ssh/ubantu_key.pem ansible_python_interpreter=/usr/bin/python3
 
 [k8s:children]
 k8s_master
+k8s_worker
