@@ -219,3 +219,118 @@ cp index.html /var/www/html/index.html
 
 systemctl restart nginx
 
+```
+
+#### 🟢 Step 5: Terminate Old Instance
+
+- Old EC2 removed
+- New EC2 serves v2.0
+
+
+---
+
+## ✅ Recreate Deployment — Result
+
+✔ Application successfully updated  
+✔ New EC2 instance launched  
+✔ Old EC2 instance terminated  
+
+---
+
+# 🔄 Rolling Deployment (Implemented)
+
+## 🏗️ Architecture
+
+👤 User
+↓
+⚖️ Application Load Balancer
+↓
+📈 Auto Scaling Group
+↓
+🖥️ EC2 Instances (v1 → v2)
+
+
+---
+
+## 🔹 Auto Scaling Configuration
+
+⚙️ **Auto Scaling Group Settings**
+
+- 🔢 **Minimum instances:** 2  
+- 🔢 **Maximum instances:** 4  
+- ⚖️ **Attached to:** Application Load Balancer (ALB)
+
+---
+
+## 🟢 Step 2: Store Artifacts in Amazon S3
+
+📦 Application versions are stored securely in **Amazon S3**  
+⬇️ EC2 instances automatically **fetch artifacts during launch** using User Data  
+
+---
+
+## 🟢 Step 3: Deploy Initial Version
+
+🚀 Auto Scaling Group launched with **application version v1**  
+🔍 Application verified using **Load Balancer DNS endpoint**
+
+---
+
+## 🟢 Step 4: Launch Template (v2)
+
+
+---
+
+### 🟢 Step 5: Instance Refresh
+
+🔁 Auto Scaling Group updated to use **Launch Template v2**  
+🔄 Instances replaced **gradually** to avoid downtime  
+
+⚠️ **During Refresh**
+- Temporary mix of **v1 & v2** instances running  
+
+✅ **Final State**
+- All instances running **v2**
+
+📸 *Screenshot: Instance Refresh in progress*
+
+---
+
+## ✅ Rolling Deployment — Result
+
+✔ Zero downtime achieved  
+✔ Gradual and safe rollout  
+✔ Production-ready deployment  
+
+---
+
+## ⭐ Optional Implementations
+
+### 🔵🟢 Blue-Green Deployment
+
+- Two identical environments: **Blue & Green**  
+- Traffic switched using **Application Load Balancer**  
+- Configuration files stored in **Amazon S3**
+
+---
+
+### 🐤 Canary Deployment
+
+- New version released to a **small subset of instances**  
+- Metrics & logs stored in **Amazon S3**  
+- Full rollout performed after successful validation  
+
+---
+
+## 📊 Deployment Strategy Comparison
+
+| Strategy        | Downtime | Risk      | Cost   | Complexity |
+|-----------------|----------|-----------|--------|------------|
+| 🔴 Recreate     | Yes      | High      | Low    | Low        |
+| 🔄 Rolling      | No       | Medium    | Medium | Medium     |
+| 🔵🟢 Blue-Green | No       | Low       | High   | High       |
+| 🐤 Canary       | No       | Very Low  | Medium | High       |
+| 🧪 A/B          | No       | Medium    | High   | Very High  |
+
+---
+
