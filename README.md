@@ -132,3 +132,90 @@ Two application versions are served to **different user groups** for comparison.
 
 ### 🏗️ Architecture
 
+👤 User
+↓
+🌐 Browser
+↓
+🖥️ EC2 (Nginx)
+↓
+📦 Static Assets (Amazon S3)
+↑
+🧩 Custom AMI
+
+
+---
+
+### 🔧 Implementation Steps
+
+#### 🟢 Step 1: Launch Base EC2
+- Ubuntu EC2 instance  
+- Install **Nginx**  
+- Deploy basic website  
+
+---
+
+#### 🟢 Step 2: Upload Static Assets to S3
+- Create S3 bucket  
+- Upload:
+  - 📄 HTML  
+  - 🎨 CSS  
+  - 🖼️ Images  
+- Configure access via IAM / public access  
+
+
+---
+
+#### 🟢 Step 3: Create Custom AMI
+- Create AMI snapshot from EC2  
+- Represents **Application v1.0**
+
+📸 _Screenshot: AMI created_
+
+---
+
+#### 🟢 Step 4: Launch New EC2 (v2)
+
+
+---
+
+### 🔧 Implementation Steps
+
+#### 🟢 Step 1: Launch Base EC2
+- Ubuntu EC2 instance  
+- Install **Nginx**  
+- Deploy basic website  
+
+
+---
+
+#### 🟢 Step 2: Upload Static Assets to S3
+- Create S3 bucket  
+- Upload:
+  - 📄 HTML  
+  - 🎨 CSS  
+  - 🖼️ Images  
+- Configure access via IAM / public access  
+
+---
+
+#### 🟢 Step 3: Create Custom AMI
+- Create AMI snapshot from EC2  
+- Represents **Application v1.0**
+
+---
+
+#### 🟢 Step 4: Launch New EC2 (v2)
+
+```bash
+#!/bin/bash
+apt update -y
+
+cd /tmp
+wget -O index.html https://nginx-static-website-demo-123.s3.ap-northeast-3.amazonaws.com/recreate.html
+sed -i 's/v1.0/v2.0/g' index.html
+
+rm -f /var/www/html/index.html
+cp index.html /var/www/html/index.html
+
+systemctl restart nginx
+
