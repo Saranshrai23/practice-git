@@ -1,5 +1,37 @@
 "# 📄 Disk & Ulimit Management
 
+## Standard Operating Procedure
+
+---
+
+## Document Details
+
+| Author         | Created    | Version | Last updated by | Last Edited On | PRE Reviewer | L0 Reviewer | L1 Reviewer | L2 Reviewer |
+| -------------- | ---------- | ------- | --------------- | -------------- | ------------ | ----------- | ----------- | ----------- |
+| Saransh Rai | 2026-04-13 | 1.0     | Saransh Rai  | 2026-04-13     |              |             |             |             |
+
+---
+
+## 📑 Table of Contents
+
+1. Overview
+2. [Purpose](#1-purpose)
+3. [Scope](#2-scope)
+4. [Pre-requisites](#3-pre-requisites)
+5. [Architecture](#4-architecture)
+6. [Disk Management Commands](#5-disk-management-commands)
+7. [Ulimit Configuration](#6-ulimit-configuration)
+8. [Step-by-Step Configuration](#7-step-by-step-configuration)
+9. [Monitoring](#8-monitoring)
+10. [Disaster Recovery](#9-disaster-recovery)
+11. [Troubleshooting](#10-troubleshooting)
+12. [Best Practices](#11-best-practices)
+13. [FAQs](#12-faqs)
+14. [Contact Information](#13-contact-information)
+15. [References](#14-references)
+
+---
+
 ## 🚀 Overview
 This guide explains basic disk management and ulimit configuration in Linux (Ubuntu).  
 It helps in monitoring disk usage and controlling system resource limits to avoid system failures.
