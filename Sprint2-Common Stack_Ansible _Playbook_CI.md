@@ -1,3 +1,8 @@
+<p align="left">
+  <img width="190" height="191" alt="image" src="https://github.com/user-attachments/assets/717d70ec-91ab-4141-a105-9200a519f7e7" />
+  <br/>
+</p>
+
 # Common Stack | Ansible | Playbook | CI Workflow Documentation
 
 ---
@@ -77,7 +82,8 @@ The CI workflow for Ansible playbooks ensures that playbooks are validated befor
 
 <br>
 
-<img width="900" alt="CI Workflow Diagram" src="https://github.com/user-attachments/assets/2dbfbd9b-ansible-ci-workflow-demo.png">
+<img width="1010" height="381" alt="image" src="https://github.com/user-attachments/assets/c8c581b0-e878-4772-bae8-d8abbc006985" />
+
 
 </details>
 
