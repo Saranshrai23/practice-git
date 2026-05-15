@@ -12,22 +12,20 @@
 
 # Table of Contents
 
-1. [Introduction](#1-introduction)
-2. [Purpose](#2-purpose)
-3. [What are Ansible Playbooks](#3-what-are-ansible-playbooks)
-4. [CI Checks in Ansible](#4-ci-checks-in-ansible)
-
-   * [4.1 Common CI Checks](#41-common-ci-checks)
-5. [CI Workflow for Playbooks](#5-ci-workflow-for-playbooks)
-
-   * [5.1 CI Workflow Diagram](#51-ci-workflow-diagram-click-to-expand)
-   * [5.2 Sample Jenkins Pipeline](#52-sample-jenkins-pipeline)
-6. [Best Practices](#6-best-practices)
-7. [Use Cases](#7-use-cases)
-8. [Troubleshooting](#8-troubleshooting)
-9. [Conclusion](#9-conclusion)
-10. [Contact Information](#10-contact-information)
-11. [References](#11-references)
+1. [1 Introduction](#1-introduction)
+2. [2 Purpose](#2-purpose)
+3. [3 What are Ansible Playbooks](#3-what-are-ansible-playbooks)
+4. [4 CI Checks in Ansible](#4-ci-checks-in-ansible)
+   4.1 [41 Common CI Checks](#41-common-ci-checks)
+5. [5 CI Workflow for Playbooks](#5-ci-workflow-for-playbooks)
+   5.1 [51 CI Workflow Diagram](#51-ci-workflow-diagram-click-to-expand)
+   5.2 [52 Sample Jenkins Pipeline](#52-sample-jenkins-pipeline)
+6. [6 Best Practices](#6-best-practices)
+7. [7 Use Cases](#7-use-cases)
+8. [8 Troubleshooting](#8-troubleshooting)
+9. [9 Conclusion](#9-conclusion)
+10. [10 Contact Information](#10-contact-information)
+11. [11 References](#11-references)
 
 ---
 
@@ -53,7 +51,7 @@ Ansible Playbooks are structured YAML files that define a series of tasks to be 
 
 CI checks are automated validations performed on playbooks before they are merged or executed. These checks ensure correctness, security, and adherence to best practices.
 
-##      4.1 Common CI Checks
+## &nbsp;&nbsp;&nbsp;4.1 Common CI Checks
 
 | CI Check                     | Command / Validation                                 | Purpose                                                                        |
 | ---------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------ |
@@ -71,7 +69,7 @@ CI checks are automated validations performed on playbooks before they are merge
 
 The CI workflow for Ansible playbooks ensures that playbooks are validated before deployment or execution. When a developer pushes a playbook to the Git repository, the CI pipeline is automatically triggered using Jenkins, GitHub Actions, or another CI/CD tool. The pipeline then runs configured validation checks such as syntax validation, linting, YAML validation, dry run, formatting, dependency, and security checks.
 
-##      5.1 CI Workflow Diagram (Click to Expand)
+## &nbsp;&nbsp;&nbsp;5.1 CI Workflow Diagram (Click to Expand)
 
 <details>
 <summary>Click to Expand CI Workflow Diagram</summary>
@@ -82,7 +80,7 @@ The CI workflow for Ansible playbooks ensures that playbooks are validated befor
 
 </details>
 
-##      5.2 Sample Jenkins Pipeline
+## &nbsp;&nbsp;&nbsp;5.2 Sample Jenkins Pipeline
 
 ```groovy
 pipeline {
