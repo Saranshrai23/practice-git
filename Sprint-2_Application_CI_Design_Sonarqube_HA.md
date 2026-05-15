@@ -181,8 +181,5 @@ SonarQube HA keeps SonarQube running all the time. Multiple servers, Load Balanc
 | [Elasticsearch Documentation](https://www.elastic.co/guide/index.html)                                          | Official Elasticsearch documentation for clustering and indexing           |
 | [NGINX Load Balancer Documentation](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/) | Explains load balancing concepts and configuration                         |
 
------------|-------------|
-| [https://docs.sonarsource.com/sonarqube/](https://docs.sonarsource.com/sonarqube/) | Official documentation for installation, configuration, and best practices |
-| [https://docs.sonarsource.com/sonarqube/latest/architecture/](https://docs.sonarsource.com/sonarqube/latest/architecture/) | Explains SonarQube components and how they work |
 
 ---
