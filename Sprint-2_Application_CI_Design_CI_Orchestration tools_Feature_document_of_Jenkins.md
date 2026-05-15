@@ -12,16 +12,15 @@
 
 ## Table of Contents
 
-1. [Introduction](#1-introduction)
-2. [What is Jenkins](#2-what-is-jenkins)
-3. [Why Jenkins is Used](#3-why-jenkins-is-used)
-4. [Workflow Diagram of Jenkins](#4-workflow-diagram-of-jenkins)
-5. [Advantages of Jenkins](#5-advantages-of-jenkins)
-6. [Disadvantages of Jenkins](#6-disadvantages-of-jenkins)
-7. [Best Practices](#7-best-practices)
-8. [Conclusion](#8-conclusion)
-9. [Contact Information](#9-contact-information)
-10. [References](#10-references)
+1. [Introduction](#1-introduction)<br>
+2. [What is Jenkins](#2-what-is-jenkins)<br>
+3. [Why Jenkins is Used](#3-why-jenkins-is-used)<br>
+4. [Workflow Diagram of Jenkins](#4-workflow-diagram-of-jenkins)<br>
+5. [Advantages & Disadvantages of Jenkins](#5-advantages--disadvantages-of-jenkins)<br>
+6. [Best Practices](#6-best-practices)<br>
+7. [Conclusion](#7-conclusion)<br>
+8. [Contact Information](#8-contact-information)<br>
+9. [References](#9-references)<br>
 
 ---
 
@@ -88,13 +87,13 @@ Jenkins is used to automate repetitive software delivery tasks and improve devel
 
 ---
 
-## 8. Conclusion
+## 7. Conclusion
 
 Jenkins is a powerful CI orchestration tool used to automate the build, test, and deployment process. It helps organizations implement Continuous Integration and Continuous Delivery efficiently. By using Jenkins, teams can reduce errors, improve software quality, and release applications faster.
 
 ---
 
-## 9. Contact Information
+## 8. Contact Information
 
 | Contact Type | Details                                                                         |
 | ------------ | ------------------------------------------------------------------------------- |
@@ -102,7 +101,7 @@ Jenkins is a powerful CI orchestration tool used to automate the build, test, an
 
 ---
 
-## 10. References
+## 9. References
 
 | Topic                                                                       | Description                                                                 |
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
