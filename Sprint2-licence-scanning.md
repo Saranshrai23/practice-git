@@ -123,6 +123,13 @@ git clone https://github.com/OT-MICROSERVICES/employee-api.git
 cd employee-api
 ```
 
+<details>
+  <summary>Click to view image</summary>
+
+  <img width="1007" height="191" alt="image" src="https://github.com/user-attachments/assets/ed266a42-b82c-4c80-ad15-138915c7b1ed" />
+
+</details>
+
 ---
 
 # 11. Install Trivy
@@ -138,17 +145,26 @@ sudo apt-get update
 sudo apt-get install -y trivy
 ```
 
+<details>
+  <summary>Click to expand image</summary>
+
+  <img width="1472" height="785" alt="image" src="https://github.com/user-attachments/assets/dce619e2-50f1-449c-a208-9335761dd65e" />
+
+</details>
+
+
 ## 11.1 Verify Installation
 
 ```bash
 trivy --version
 ```
 
-> **Screenshot Placeholder:** Insert screenshot showing successful Trivy installation and version output.
+<details>
+  <summary>Click to expand verification screenshot</summary>
 
-```text
-[ Screenshot: Trivy Version Output ]
-```
+  <img width="637" height="41" alt="image" src="https://github.com/user-attachments/assets/05fbf874-83f2-49a2-9e78-c8b42359dd1c" />
+
+</details>
 
 ---
 
@@ -162,13 +178,23 @@ Run scan inside project directory:
 trivy fs --scanners license .
 ```
 
-> **Screenshot Placeholder:** Insert screenshot showing terminal output of license scanning results.
+<details>
+  <summary>Click to expand all scan result screenshots</summary>
 
-```text
-[ Screenshot: Trivy License Scan Output ]
-```
+  <br>
 
-<img width="1698" height="465" alt="image" src="https://github.com/user-attachments/assets/de182322-73e6-4645-9191-5396dd29478b" />
+  <img width="892" height="881" alt="image" src="https://github.com/user-attachments/assets/dc7b454e-e26c-48ac-8b60-bc0afec8e0c0" />
+
+  <br><br>
+
+  <img width="885" height="957" alt="image" src="https://github.com/user-attachments/assets/2ac83ac3-405d-4055-918d-6397bf4c312e" />
+
+  <br><br>
+
+  <img width="872" height="957" alt="image" src="https://github.com/user-attachments/assets/237f5d3e-6c96-44b4-89fd-223182a4cb9e" />
+
+</details>
+
 
 This command:
 
@@ -184,29 +210,43 @@ This command:
 
 ```bash
 trivy fs --scanners license -f table -o license-report.txt .
+cat license-report.txt
 ```
 
-> **Screenshot Placeholder:** Insert screenshot showing generated table report.
 
-```text
-[ Screenshot: License Report Table Output ]
-```
+<details>
+  <summary>Click to expand table report screenshots</summary>
 
-<img width="1889" height="582" alt="image" src="https://github.com/user-attachments/assets/0589d568-3a4a-459f-9387-7c1b91775480" />
+  <br>
+
+  <img width="915" height="860" alt="image" src="https://github.com/user-attachments/assets/72542d5d-7c88-4cbc-bef4-a3664984f038" />
+
+  <br><br>
+
+  <img width="880" height="966" alt="image" src="https://github.com/user-attachments/assets/e135488e-efae-446e-a5c0-085be82b392b" />
+
+  <br><br>
+
+  <img width="867" height="971" alt="image" src="https://github.com/user-attachments/assets/ac60fd07-782a-48da-9d01-d567b16076f7" />
+
+</details>
+
 
 ## 13.2 JSON Report (Recommended for Audit)
 
 ```bash
 trivy fs --scanners license -f json -o license-report.json .
+cat license-report.json
 ```
 
-> **Screenshot Placeholder:** Insert screenshot showing generated JSON report.
+<details>
+  <summary>Click to expand JSON report screenshot</summary>
 
-```text
-[ Screenshot: JSON License Report ]
-```
+  <br>
 
-<img width="1919" height="920" alt="image" src="https://github.com/user-attachments/assets/6c6ea5e0-6e10-4f5e-985f-47d126741ae1" />
+  <img width="1331" height="912" alt="image" src="https://github.com/user-attachments/assets/e48b7ad2-0ca7-448e-bcb2-4af414030d01" />
+
+</details>
 
 This report can be stored for compliance documentation.
 
@@ -217,7 +257,7 @@ This report can be stored for compliance documentation.
 To fail build if any license issue is detected:
 
 ```bash
-trivy fs --scanners license --exit-code 1 .
+trivy fs --scanners license --severity MEDIUM,HIGH,CRITICAL --exit-code 1 .
 ```
 
 ## 14.1 Exit Code Meaning
@@ -229,12 +269,6 @@ trivy fs --scanners license --exit-code 1 .
 
 ```bash
 echo $?
-```
-
-> **Screenshot Placeholder:** Insert screenshot showing exit code validation.
-
-```text
-[ Screenshot: Exit Code Validation ]
 ```
 
 ---
