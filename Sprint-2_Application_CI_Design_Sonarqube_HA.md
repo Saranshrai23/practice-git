@@ -66,7 +66,8 @@ SonarQube High Availability (HA) ensures that the SonarQube service remains acce
 
 ## 5. SonarQube HA Workflow Diagram
 
-<img width="1400" height="1000" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/8a776827-af5e-4d18-810f-5f3ad77868b5" />
+<img width="80%" height="70%" alt="image" src="https://github.com/user-attachments/assets/8b9b32fa-423b-463d-99ce-8a07852a1414" />
+
 
 ---
 
