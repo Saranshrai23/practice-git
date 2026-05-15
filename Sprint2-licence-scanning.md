@@ -153,7 +153,7 @@ sudo apt-get install -y trivy
 </details>
 
 
-## 11.1 Verify Installation
+## &nbsp;&nbsp;&nbsp;&nbsp;11.1 Verify Installation
 
 ```bash
 trivy --version
@@ -206,7 +206,7 @@ This command:
 
 # 13. Generate Reports
 
-## 13.1 Table Report
+## &nbsp;&nbsp;&nbsp;&nbsp;13.1 Table Report
 
 ```bash
 trivy fs --scanners license -f table -o license-report.txt .
@@ -232,7 +232,7 @@ cat license-report.txt
 </details>
 
 
-## 13.2 JSON Report (Recommended for Audit)
+## &nbsp;&nbsp;&nbsp;&nbsp;13.2 JSON Report (Recommended for Audit)
 
 ```bash
 trivy fs --scanners license -f json -o license-report.json .
@@ -260,12 +260,12 @@ To fail build if any license issue is detected:
 trivy fs --scanners license --severity MEDIUM,HIGH,CRITICAL --exit-code 1 .
 ```
 
-## 14.1 Exit Code Meaning
+## &nbsp;&nbsp;&nbsp;&nbsp;14.1 Exit Code Meaning
 
 * 0 → No violation
 * 1 → License detected (can be used to fail CI)
 
-## 14.2 Validate Exit Code
+## &nbsp;&nbsp;&nbsp;&nbsp;14.2 Validate Exit Code
 
 ```bash
 echo $?
@@ -294,7 +294,7 @@ echo $?
 | Review dependencies     | Prevents unauthorized package usage               |
 | Integrate with CI/CD    | Enables automated compliance validation           |
 
-## 16.1 Example License Policy
+## &nbsp;&nbsp;&nbsp;&nbsp;16.1 Example License Policy
 
 | License Type         | Status          |
 | -------------------- | --------------- |
@@ -306,7 +306,11 @@ echo $?
 
 # 17. Conclusion
 
-This POC successfully demonstrates how Trivy can be used for manual license scanning and compliance validation on the employee-api repository. The process is lightweight, easy to integrate, and suitable for both manual audits and CI/CD-based compliance enforcement.
+License scanning POC successfully completed using Trivy on the Employee API repository. Trivy scanned the Go module file and identified licenses used by direct and indirect dependencies, including MIT, BSD, Apache-2.0, ISC, and MPL-2.0. Most licenses were categorized as LOW severity notice licenses, while MPL-2.0 was marked as MEDIUM because it is a reciprocal license and may require additional compliance review.
+
+## Final next step:
+
+Review MPL-2.0 dependency with the team and add license scanning into CI/CD pipeline so every commit or merge request automatically checks license compliance.
 
 # 18. Final Recommendation
 
