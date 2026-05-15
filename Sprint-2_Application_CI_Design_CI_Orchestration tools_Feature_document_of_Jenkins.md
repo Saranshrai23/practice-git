@@ -33,13 +33,13 @@ Jenkins is an open-source CI/CD automation tool used to automate build, test, an
 
 ## 2. What is Jenkins
 
-Jenkins is a CI orchestration tool that manages and controls the complete automation workflow of software development. It automates tasks such as pulling source code from Git repositories, building applications, running automated tests, creating build artifacts, deploying applications to servers, and monitoring build status. Jenkins uses a file called *Jenkinsfile* to define pipeline stages and workflow steps. It supports both Declarative and Scripted pipelines, allowing teams to build flexible and automated CI/CD processes.
+Jenkins is an open-source CI orchestration tool used to automate software development workflows. It performs tasks such as source code integration, application builds, automated testing, artifact creation, deployment, and build monitoring. Jenkins uses a file called *Jenkinsfile* to define CI/CD pipeline stages and supports both Declarative and Scripted pipelines.
 
 ---
 
 ## 3. Why Jenkins is Used
 
-Jenkins is used to automate the software development process, including building, testing, and deploying applications. It helps reduce manual work by automating repetitive tasks and minimizes human errors through continuous automation. Jenkins enables faster software delivery by automatically validating code changes and executing CI/CD pipelines. It also supports continuous integration and continuous deployment practices while maintaining build logs, reports, and history for monitoring and troubleshooting purposes.
+Jenkins is used to automate repetitive software delivery tasks and improve development efficiency. It helps reduce manual effort, minimize human errors, accelerate software delivery, and support Continuous Integration and Continuous Deployment (CI/CD) practices. Jenkins also maintains logs, reports, and build history for monitoring and troubleshooting.
 
 ---
 
