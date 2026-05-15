@@ -18,26 +18,34 @@
 
 # Table of Contents
 
-1. [Introduction](#introduction)
-2. [What is License Scanning?](#what-is-license-scanning)
-3. [Why License Scanning is Important](#why-license-scanning-is-important)
-4. [Purpose](#purpose)
-5. [Workflow Diagram](#workflow-diagram)
-6. [Different Tools](#different-tools)
-7. [Tool Comparison](#tool-comparison)
-8. [Advantages](#advantages)
-9. [Prerequisites](#prerequisites)
-10. [Clone Repository](#clone-repository)
-11. [Install Trivy](#install-trivy)
-12. [Run License Scan](#run-license-scan)
-13. [Generate Reports](#generate-reports)
-14. [Policy Enforcement](#policy-enforcement)
-15. [Scan Validation](#scan-validation)
-16. [Best Practices](#best-practices)
-17. [Conclusion](#conclusion)
-18. [Final Recommendation](#final-recommendation)
-19. [Contact Information](#contact-information)
-20. [References](#references)
+# Table of Contents
+
+1. [Introduction](#1-introduction)
+2. [What is License Scanning?](#2-what-is-license-scanning)
+3. [Why License Scanning is Important](#3-why-license-scanning-is-important)
+4. [Purpose](#4-purpose)
+5. [Workflow Diagram](#5-workflow-diagram)
+6. [Different Tools](#6-different-tools)
+7. [Tool Comparison](#7-tool-comparison)
+8. [Advantages](#8-advantages)
+9. [Prerequisites](#9-prerequisites)
+10. [Clone Repository](#10-clone-repository)
+11. [Install Trivy](#11-install-trivy)
+   - [11.1 Verify Installation](#111-verify-installation)
+12. [Run License Scan](#12-run-license-scan)
+13. [Generate Reports](#13-generate-reports)
+   - [13.1 Table Report](#131-table-report)
+   - [13.2 JSON Report (Recommended for Audit)](#132-json-report-recommended-for-audit)
+14. [Policy Enforcement](#14-policy-enforcement)
+   - [14.1 Exit Code Meaning](#141-exit-code-meaning)
+   - [14.2 Validate Exit Code](#142-validate-exit-code)
+15. [Scan Validation](#15-scan-validation)
+16. [Best Practices](#16-best-practices)
+   - [16.1 Example License Policy](#161-example-license-policy)
+17. [Conclusion](#17-conclusion)
+18. [Final Recommendation](#18-final-recommendation)
+19. [Contact Information](#19-contact-information)
+20. [References](#20-references)
 
 ---
 
@@ -311,6 +319,8 @@ License scanning POC successfully completed using Trivy on the Employee API repo
 ## Final next step:
 
 Review MPL-2.0 dependency with the team and add license scanning into CI/CD pipeline so every commit or merge request automatically checks license compliance.
+
+---
 
 # 18. Final Recommendation
 
