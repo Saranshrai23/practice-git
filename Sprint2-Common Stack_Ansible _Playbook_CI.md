@@ -78,7 +78,7 @@ The CI workflow for Ansible playbooks ensures that playbooks are validated befor
 ## &nbsp;&nbsp;&nbsp;5.1 CI Workflow Diagram (Click to Expand)
 
 <details>
-<summary>Click to Expand CI Workflow Diagram</summary>
+<summary><b>📊 CI Workflow Diagram (Click to Expand)</b></summary>
 
 <br>
 
