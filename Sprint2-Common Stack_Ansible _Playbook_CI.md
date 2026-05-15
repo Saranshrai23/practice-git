@@ -12,22 +12,23 @@
 
 # Table of Contents
 
-1. [1 Introduction](#1-introduction)
-2. [2 Purpose](#2-purpose)
-3. [3 What are Ansible Playbooks](#3-what-are-ansible-playbooks)
-4. [4 CI Checks in Ansible](#4-ci-checks-in-ansible)
-   4.1 [41 Common CI Checks](#41-common-ci-checks)
-5. [5 CI Workflow for Playbooks](#5-ci-workflow-for-playbooks)
-   5.1 [51 CI Workflow Diagram](#51-ci-workflow-diagram-click-to-expand)
-   5.2 [52 Sample Jenkins Pipeline](#52-sample-jenkins-pipeline)
-6. [6 Best Practices](#6-best-practices)
-7. [7 Use Cases](#7-use-cases)
-8. [8 Troubleshooting](#8-troubleshooting)
-9. [9 Conclusion](#9-conclusion)
-10. [10 Contact Information](#10-contact-information)
-11. [11 References](#11-references)
+1. [Introduction](#1-introduction)<br>
+2. [Purpose](#2-purpose)<br>
+3. [What are Ansible Playbooks](#3-what-are-ansible-playbooks)<br>
+4. [CI Checks in Ansible](#4-ci-checks-in-ansible)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;4.1 [Common CI Checks](#41-common-ci-checks)<br>
+5. [CI Workflow for Playbooks](#5-ci-workflow-for-playbooks)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;5.1 [CI Workflow Diagram](#51-ci-workflow-diagram-click-to-expand)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;5.2 [Sample Jenkins Pipeline](#52-sample-jenkins-pipeline)<br>
+6. [Best Practices](#6-best-practices)<br>
+7. [Use Cases](#7-use-cases)<br>
+8. [Troubleshooting](#8-troubleshooting)<br>
+9. [Conclusion](#9-conclusion)<br>
+10. [Contact Information](#10-contact-information)<br>
+11. [References](#11-references)<br>
 
 ---
+
 
 # 1. Introduction
 
