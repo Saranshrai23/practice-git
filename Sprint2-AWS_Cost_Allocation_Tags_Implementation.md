@@ -13,7 +13,7 @@
 1. [Introduction](#1-introduction)
 2. [What are AWS Cost Allocation Tags?](#2-what-are-aws-cost-allocation-tags)
 3. [Benefits of AWS Cost Allocation Tags](#3-benefits-of-aws-cost-allocation-tags)
-4. [Workflow](#4-workflow)
+4. [Prerequisites & Workflow](#4-prerequisites--workflow)
 5. [Tagging Strategy](#5-tagging-strategy)
 6. [Resource Tagging Implementation](#6-resource-tagging-implementation)
    * &nbsp;&nbsp;&nbsp;&nbsp; [6.1 EC2 Instance Tags](#-61-ec2-instance-tags)
@@ -88,7 +88,19 @@ AWS supports two types of tags:
 
 ---
 
-# 4. Workflow
+# 4. Prerequisites & Workflow
+
+The following prerequisites were required before implementing AWS Cost Allocation Tags.
+
+| Prerequisite                     | Justification                                                |
+| -------------------------------- | ------------------------------------------------------------ |
+| AWS Account                      | Required to access AWS resources and Billing Console         |
+| IAM Permissions                  | Needed to create tags and access billing information         |
+| AWS Billing Access Enabled       | Required to activate Cost Allocation Tags                    |
+| Existing AWS Resources           | Resources such as EC2, RDS, or S3 are needed for tagging     |
+| Standardized Tagging Strategy    | Ensures consistent cost tracking and reporting               |
+| Cost Explorer Enabled            | Required for analyzing tagged resource costs                 |
+| Basic Understanding of AWS Tags  | Helps in implementing proper tagging structure               |
 
 <details>
 <summary>Click to Expand AWS Cost Allocation Workflow Screenshot</summary>
