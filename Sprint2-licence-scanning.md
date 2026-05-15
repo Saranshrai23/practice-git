@@ -67,24 +67,7 @@ This document explains the process of performing manual license scanning using T
 
 # 5. Workflow Diagram
 
-```text
-Developer Code
-      │
-      ▼
-Repository Dependencies
-      │
-      ▼
-Trivy License Scanner
-      │
-      ├── Detect Licenses
-      ├── Validate Policies
-      ├── Generate Reports
-      └── Return Exit Codes
-      │
-      ▼
-Compliance Validation / CI Pipeline
-```
-<img width="2104" height="1969" alt="mermaid-diagram (3)" src="https://github.com/user-attachments/assets/35332100-c84d-4e07-9614-ebf650cf4aa6" />
+<img width="70%" height="1969" alt="mermaid-diagram (3)" src="https://github.com/user-attachments/assets/35332100-c84d-4e07-9614-ebf650cf4aa6" />
 
 ---
 
