@@ -18,8 +18,6 @@
 
 # Table of Contents
 
-# Table of Contents
-
 1. [Introduction](#1-introduction)
 2. [What is License Scanning?](#2-what-is-license-scanning)
 3. [Why License Scanning is Important](#3-why-license-scanning-is-important)
