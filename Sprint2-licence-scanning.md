@@ -1,3 +1,8 @@
+<p align="left">
+  <img width="219" height="230" alt="image" src="https://github.com/user-attachments/assets/b5362507-a614-4798-bb5d-6c37ab79e3ee" />
+</p>
+
+
 # POC – License Scanning using Trivy
 
 ---
@@ -18,7 +23,6 @@
 
 # Table of Contents
 
-
 1. [Introduction](#1-introduction)
 2. [What is License Scanning?](#2-what-is-license-scanning)
 3. [Why License Scanning is Important](#3-why-license-scanning-is-important)
@@ -29,17 +33,17 @@
 8. [Advantages](#8-advantages)
 9. [Prerequisites](#9-prerequisites)
 10. [Clone Repository](#10-clone-repository)
-11. [Install Trivy](#11-install-trivy)
+11. [Install Trivy](#11-install-trivy)  
 &nbsp;&nbsp;&nbsp;&nbsp;11.1 [Verify Installation](#111-verify-installation)
 12. [Run License Scan](#12-run-license-scan)
-13. [Generate Reports](#13-generate-reports)
-&nbsp;&nbsp;&nbsp;&nbsp;13.1 [Table Report](#131-table-report)
+13. [Generate Reports](#13-generate-reports)  
+&nbsp;&nbsp;&nbsp;&nbsp;13.1 [Table Report](#131-table-report)  
 &nbsp;&nbsp;&nbsp;&nbsp;13.2 [JSON Report (Recommended for Audit)](#132-json-report-recommended-for-audit)
-14. [Policy Enforcement](#14-policy-enforcement)
-&nbsp;&nbsp;&nbsp;&nbsp;14.1 [Exit Code Meaning](#141-exit-code-meaning)
+14. [Policy Enforcement](#14-policy-enforcement)  
+&nbsp;&nbsp;&nbsp;&nbsp;14.1 [Exit Code Meaning](#141-exit-code-meaning)  
 &nbsp;&nbsp;&nbsp;&nbsp;14.2 [Validate Exit Code](#142-validate-exit-code)
 15. [Scan Validation](#15-scan-validation)
-16. [Best Practices](#16-best-practices)
+16. [Best Practices](#16-best-practices)  
 &nbsp;&nbsp;&nbsp;&nbsp;16.1 [Example License Policy](#161-example-license-policy)
 17. [Conclusion](#17-conclusion)
 18. [Final Recommendation](#18-final-recommendation)
@@ -116,10 +120,11 @@ This document explains the process of performing manual license scanning using T
 
 # 9. Prerequisites
 
-* Linux / Ubuntu / WSL
-* Git installed
-* Trivy installed
-* Internet connection
+| Prerequisite        | Justification |
+| ------------------- | ------------- |
+| Linux / Ubuntu / WSL | Required environment to install and run Trivy commands and package managers. |
+| Git installed | Needed to clone the target repository before performing license scanning. |
+| Trivy installed | Main security and license scanning tool used for dependency license analysis. |
 
 ---
 
