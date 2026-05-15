@@ -201,11 +201,8 @@ CI checks for Ansible playbooks ensure reliable, error-free, and standardized au
 
 # 11. References
 
-| Topic                          | Description                                   |
-| ------------------------------ | --------------------------------------------- |
-| Ansible Documentation          | Official Ansible documentation                |
-| Ansible Lint                   | Tool for checking playbook quality            |
-| YAML Lint                      | YAML validation tool                          |
-| Jenkins Pipeline Documentation | Jenkins CI/CD pipeline documentation          |
-| Gitleaks                       | Secret detection tool                         |
-| Trivy                          | Vulnerability and configuration scanning tool |
+| Topic                                                | Description                        |
+| ---------------------------------------------------- | ---------------------------------- |
+| [Ansible Documentation](https://docs.ansible.com/)   | Official Ansible documentation     |
+| [Ansible Lint](https://ansible-lint.readthedocs.io/) | Tool for checking playbook quality |
+| [YAML Lint](https://yamllint.readthedocs.io/)        | YAML validation tool               |
