@@ -1,0 +1,135 @@
+# Jenkins CI Orchestration Tool Documentation
+
+---
+
+## Author Information
+
+| Author      | Created on | Version | Last updated by | Last edited on | L0 Reviewer | L1 Reviewer     | L2 Reviewer     |
+| ----------- | ---------- | ------- | --------------- | -------------- | ----------- | --------------- | --------------- |
+| Saransh Rai | 15-05-2026 | v1.0    | Saransh Rai     | 15-05-2026     | Anuj Jain   | Prashant Sharma | Piyush Upadhyay |
+
+---
+
+## Table of Contents
+
+1. [Introduction](#1-introduction)
+2. [What is Jenkins](#2-what-is-jenkins)
+3. [Why Jenkins is Used](#3-why-jenkins-is-used)
+4. [Workflow Diagram of Jenkins](#4-workflow-diagram-of-jenkins)
+5. [Advantages of Jenkins](#5-advantages-of-jenkins)
+6. [Disadvantages of Jenkins](#6-disadvantages-of-jenkins)
+7. [Best Practices](#7-best-practices)
+8. [Conclusion](#8-conclusion)
+9. [Contact Information](#9-contact-information)
+10. [References](#10-references)
+
+---
+
+## 1. Introduction
+
+Jenkins is an open-source CI/CD automation tool used to automate build, test, and deployment of applications. Jenkins helps development teams deliver software faster and with fewer errors. It runs on a server and executes automated pipelines whenever code changes are pushed to a repository.
+
+---
+
+## 2. What is Jenkins
+
+Jenkins is a CI orchestration tool that manages and controls the complete automation workflow of software development.
+
+It performs tasks such as:
+
+* Pulling source code from Git repositories
+* Building the application
+* Running automated tests
+* Creating build artifacts
+* Deploying the application to servers
+* Monitoring build status
+
+Jenkins uses a file called *Jenkinsfile* to define pipeline stages.
+
+It supports both Declarative and Scripted pipelines.
+
+---
+
+## 3. Why Jenkins is Used
+
+Jenkins is used to automate the software development process like building, testing, and deploying applications.
+
+### Reasons to Use Jenkins
+
+* Saves manual work by automating repetitive tasks
+* Reduces human errors using automation
+* Enables faster software delivery
+* Supports continuous integration and deployment
+* Maintains logs and build history for troubleshooting
+
+---
+
+## 4. Workflow Diagram of Jenkins
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/80ed6443-c8cb-44f9-a860-120d593fa6be" />
+
+
+### Workflow Explanation
+
+1. *Code Commit* – Developer pushes code to Git repository.
+2. *Trigger* – Jenkins detects changes via webhook or polling.
+3. *Pipeline Start* – Pipeline defined in Jenkinsfile begins.
+4. *Build Stage* – Compile code and install dependencies.
+5. *Test Stage* – Run automated tests and validations.
+6. *Package Stage* – Create deployable application artifact.
+7. *Deploy Stage* – Deploy application to servers or environments.
+
+---
+
+## 5. Advantages & Disadvantages of Jenkins
+
+| Advantages                                                          | Disadvantages                                           |
+| ------------------------------------------------------------------- | ------------------------------------------------------- |
+| Jenkins automates build, test, and deployment workflows             | Initial setup and configuration can be complex          |
+| Open-source and free to use                                         | Requires regular maintenance and updates                |
+| Supports thousands of plugins for integrations                      | Large pipelines may consume high server resources       |
+| Easily integrates with Git, Docker, Kubernetes, and cloud platforms | Heavy plugin dependency may create compatibility issues |
+| Stores build logs, reports, and history for troubleshooting         | User interface can be confusing for beginners           |
+| Supports distributed builds and scalability                         | Misconfigured pipelines can impact system stability     |
+
+---
+
+## 6. Best Practices
+
+| Best Practice                           | Description                                                     |
+| --------------------------------------- | --------------------------------------------------------------- |
+| Use Pipelines Instead of Freestyle Jobs | Pipelines provide better automation and version control support |
+| Store Jenkinsfile in Git                | Maintains CI/CD configuration as code                           |
+| Enable Authentication and Authorization | Improves Jenkins security and access control                    |
+| Backup Jenkins Regularly                | Prevents loss of jobs and configurations                        |
+| Monitor Jenkins Performance             | Helps maintain stable server performance                        |
+| Clean Old Build Artifacts               | Saves disk space and improves performance                       |
+| Use Agents Properly                     | Distributes workloads efficiently                               |
+| Integrate Security Scanning             | Improves CI/CD security posture                                 |
+
+---
+
+## 8. Conclusion
+
+Jenkins is a powerful CI orchestration tool used to automate the build, test, and deployment process. It helps organizations implement Continuous Integration and Continuous Delivery efficiently. By using Jenkins, teams can reduce errors, improve software quality, and release applications faster.
+
+---
+
+## 9. Contact Information
+
+| Contact Type | Details                                                                         |
+| ------------ | ------------------------------------------------------------------------------- |
+| Email        | [saransh.rai.snaatak@mygurukulam.co](mailto:saransh.rai.snaatak@mygurukulam.co) |
+
+---
+
+## 10. References
+
+| Topic                                                                       | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| [Jenkins Website](https://www.jenkins.io)                                   | Provides information about Jenkins, features, download options, and updates |
+| [Jenkins Documentation](https://www.jenkins.io/doc/)                        | Official Jenkins documentation for installation and pipelines               |
+| [Jenkins Pipeline Documentation](https://www.jenkins.io/doc/book/pipeline/) | Official guide for Jenkins pipelines and CI/CD workflows                    |
+| [Jenkins Plugin Index](https://plugins.jenkins.io/)                         | Jenkins plugin repository and integration support                           |
+
+---
