@@ -1,3 +1,8 @@
+<p align="left">
+  <img width="404" height="125" alt="image" src="https://github.com/user-attachments/assets/ce03210e-4401-4941-91e0-a9b8da49c9aa" />
+  <br/>
+</p>
+
 # SonarQube High Availability (HA) — Documentation
 
 ---
