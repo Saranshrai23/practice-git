@@ -48,7 +48,7 @@ Jenkins is used to automate repetitive software delivery tasks and improve devel
 
 ## 4. Workflow Diagram of Jenkins
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/80ed6443-c8cb-44f9-a860-120d593fa6be" />
+<img width="100%" height="490" alt="image" src="https://github.com/user-attachments/assets/80ed6443-c8cb-44f9-a860-120d593fa6be" />
 
 
 ### Workflow Explanation
