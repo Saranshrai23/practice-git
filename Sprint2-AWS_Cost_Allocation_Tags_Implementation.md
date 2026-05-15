@@ -41,7 +41,7 @@
 
 # 1. Introduction
 
-AWS Cost Allocation Tags are metadata labels used to categorize and track AWS cloud costs. These tags help organizations identify spending across projects, teams, applications, and environments. By enabling tags in AWS Billing and Cost Management, organizations can analyze costs using AWS Cost Explorer and Cost Reports, improving visibility, budgeting, governance, and cloud cost optimization.
+AWS Cost Allocation Tags are metadata labels (key-value pairs) applied to AWS resources to track and categorize cloud spending. When activated in the Billing Console, they appear in Cost Explorer and cost reports, enabling granular visibility into where money is being spent across teams, projects, and environments.
 
 ---
 
@@ -354,10 +354,10 @@ This POC demonstrates how AWS Cost Allocation Tags help improve cloud cost visib
 
 # 15. References
 
-| Description                            | Link                                                                                                                                                                             |
-| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AWS Cost Allocation Tags Documentation | [https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html)           |
-| AWS Cost Explorer Documentation        | [https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html)                     |
-| AWS Tagging Best Practices             | [https://docs.aws.amazon.com/tag-editor/latest/userguide/best-practices-and-strats.html](https://docs.aws.amazon.com/tag-editor/latest/userguide/best-practices-and-strats.html) |
-
+| Topic      | Description |
+| ---------- | ----------- |
+| [AWS Cost Allocation Tags Documentation](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) | Official AWS documentation explaining Cost Allocation Tags, activation process, and billing integration. |
+| [AWS Cost Explorer Documentation](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html) | Official AWS guide for analyzing and visualizing cloud costs using AWS Cost Explorer. |
+| [AWS Tagging Best Practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/best-practices-and-strats.html) | AWS recommended best practices for implementing consistent and scalable tagging strategies. |
+| [AWS Cost Allocation Tags Documentation Ticket](https://github.com/Snaatak-Infra-Titans/Documentations/blob/SCRUM-119-versha/Cost_Optimization/Documentation/AWS_Cost_Tags/README.md?plain=1) | Internal project documentation and implementation reference for the AWS Cost Allocation Tags POC. |
 ---
