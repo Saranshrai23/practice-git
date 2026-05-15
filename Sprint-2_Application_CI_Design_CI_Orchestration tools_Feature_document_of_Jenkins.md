@@ -1,5 +1,5 @@
 <p align="left">
-  <img width="191" height="264" alt="image" src="https://github.com/user-attachments/assets/005f9167-bf87-422c-a476-3e6229cbfedc" />
+  <img width="25%" height="264" alt="image" src="https://github.com/user-attachments/assets/005f9167-bf87-422c-a476-3e6229cbfedc" />
 </p>
 
 # Jenkins CI Orchestration Tool Documentation
