@@ -33,34 +33,13 @@ Jenkins is an open-source CI/CD automation tool used to automate build, test, an
 
 ## 2. What is Jenkins
 
-Jenkins is a CI orchestration tool that manages and controls the complete automation workflow of software development.
-
-It performs tasks such as:
-
-* Pulling source code from Git repositories
-* Building the application
-* Running automated tests
-* Creating build artifacts
-* Deploying the application to servers
-* Monitoring build status
-
-Jenkins uses a file called *Jenkinsfile* to define pipeline stages.
-
-It supports both Declarative and Scripted pipelines.
+Jenkins is a CI orchestration tool that manages and controls the complete automation workflow of software development. It automates tasks such as pulling source code from Git repositories, building applications, running automated tests, creating build artifacts, deploying applications to servers, and monitoring build status. Jenkins uses a file called *Jenkinsfile* to define pipeline stages and workflow steps. It supports both Declarative and Scripted pipelines, allowing teams to build flexible and automated CI/CD processes.
 
 ---
 
 ## 3. Why Jenkins is Used
 
-Jenkins is used to automate the software development process like building, testing, and deploying applications.
-
-### Reasons to Use Jenkins
-
-* Saves manual work by automating repetitive tasks
-* Reduces human errors using automation
-* Enables faster software delivery
-* Supports continuous integration and deployment
-* Maintains logs and build history for troubleshooting
+Jenkins is used to automate the software development process, including building, testing, and deploying applications. It helps reduce manual work by automating repetitive tasks and minimizes human errors through continuous automation. Jenkins enables faster software delivery by automatically validating code changes and executing CI/CD pipelines. It also supports continuous integration and continuous deployment practices while maintaining build logs, reports, and history for monitoring and troubleshooting purposes.
 
 ---
 
