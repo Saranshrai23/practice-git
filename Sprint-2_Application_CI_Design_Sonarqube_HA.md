@@ -28,8 +28,6 @@
 
 ## 1. Introduction
 
-This document explains how SonarQube High Availability (HA) is implemented to ensure the service remains available without downtime.
-
 SonarQube is a tool used to check code quality, bugs, and security issues in applications. High Availability (HA) means the system remains available and does not stop working even if one server fails. In HA setup, multiple SonarQube servers are used so that the service continues without downtime.
 
 *Note:* High Availability feature is available only in Enterprise and Data Center editions of SonarQube.
@@ -38,25 +36,13 @@ SonarQube is a tool used to check code quality, bugs, and security issues in app
 
 ## 2. What is SonarQube HA
 
-SonarQube High Availability is a setup where multiple SonarQube application servers run together.
-
-If one server fails, another server handles the requests, and the service continues.
-
-Main components used in HA:
-
-* Multiple SonarQube servers
-* Load Balancer
-* Shared Database (PostgreSQL)
-* Elasticsearch Cluster
+SonarQube High Availability is a setup where multiple SonarQube application servers run together. If one server fails, another server handles the requests, and the service continues.
 
 ---
 
 ## 3. Why SonarQube HA is Needed
 
-* Ensures SonarQube remains available even if one server fails
-* Prevents downtime and keeps code analysis accessible
-* Ensures CI/CD pipelines continue working without interruption
-* Distributes load for better performance
+SonarQube High Availability (HA) ensures that the SonarQube service remains accessible even if one server fails. It helps prevent downtime, keeps code analysis continuously available, and ensures CI/CD pipelines continue running without interruption. HA setup also improves overall performance by distributing workload across multiple SonarQube servers.
 
 ---
 
