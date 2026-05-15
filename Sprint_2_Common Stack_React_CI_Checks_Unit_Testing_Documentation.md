@@ -9,28 +9,24 @@
 | Saransh Rai | 15-05-2026 | 1.0     | Saransh Rai     | 15-05-2026     | Anuj Jain   | Prashant Sharma | Piyush Upadhyay |
 
 ---
-
 # Table of Contents
 
-* [1. Introduction](#1-introduction)
-* [2. What is Unit Testing](#2-what-is-unit-testing)
-* [3. Why Unit Testing is Required](#3-why-unit-testing-is-required)
-* [4. React Unit Testing Workflow](#4-react-unit-testing-workflow)
-
-  * [4.1 Workflow Diagram](#41-workflow-diagram)
-* [5. Different Tools for React Unit Testing](#5-different-tools-for-react-unit-testing)
-* [6. Tool Comparison](#6-tool-comparison)
-* [7. Advantages and Disadvantages](#7-advantages-and-disadvantages)
-* [8. Proof of Concept (POC)](#8-proof-of-concept-poc)
-
-  * [8.1 Prerequisites](#81-prerequisites)
-  * [8.2 Step by Step Implementation](#82-step-by-step-implementation)
-  * [8.3 POC Conclusion](#83-poc-conclusion)
-* [9. Best Practices](#9-best-practices)
-* [10. Recommendation / Conclusion](#10-recommendation--conclusion)
-* [11. Contact Information](#11-contact-information)
-* [12. References](#12-references)
-
+1. [Introduction](#1-introduction)
+2. [What is Unit Testing](#2-what-is-unit-testing)
+3. [Why Unit Testing is Required](#3-why-unit-testing-is-required)
+4. [React Unit Testing Workflow](#4-react-unit-testing-workflow)
+   - [4.1 Workflow Diagram](#41-workflow-diagram)
+5. [Different Tools for React Unit Testing](#5-different-tools-for-react-unit-testing)
+6. [Tool Comparison](#6-tool-comparison)
+7. [Advantages and Disadvantages](#7-advantages-and-disadvantages)
+8. [Proof of Concept (POC)](#8-proof-of-concept-poc)
+   - [8.1 Prerequisites](#81-prerequisites)
+   - [8.2 Step by Step Implementation](#82-step-by-step-implementation)
+   - [8.3 POC Conclusion](#83-poc-conclusion)
+9. [Best Practices](#9-best-practices)
+10. [Recommendation / Conclusion](#10-recommendation--conclusion)
+11. [Contact Information](#11-contact-information)
+12. [References](#12-references)
 ---
 
 # 1. Introduction
@@ -55,7 +51,7 @@ Unit testing is required because it helps identify bugs early in the development
 
 The React unit testing workflow starts when a developer writes or updates a React component. Test cases are created for the component and pushed along with the code to the Git repository. After the code is pushed, the CI pipeline is triggered automatically. The pipeline installs dependencies, runs unit tests, generates test results, and decides whether the code is safe to merge or deploy.
 
-##      4.1 Workflow Diagram
+## <a name="41-workflow-diagram"></a>&nbsp;&nbsp;&nbsp;&nbsp; 4.1 Workflow Diagram
 
 <details>
 <summary>Click to Expand React Unit Testing Workflow Diagram</summary>
@@ -123,7 +119,7 @@ Fail → Fix Code and Re-run Pipeline
 
 This POC demonstrates how unit testing can be executed in a React frontend application using Jest. The frontend repository is cloned, dependencies are installed, Jest availability is verified, a test file is created, and the unit test is executed successfully.
 
-##      8.1 Prerequisites
+## <a name="81-prerequisites"></a>&nbsp;&nbsp;&nbsp;&nbsp; 8.1 Prerequisites
 
 Before starting the POC, ensure the following tools are installed:
 
@@ -136,7 +132,7 @@ Before starting the POC, ensure the following tools are installed:
 
 ---
 
-##      8.2 Step by Step Implementation
+## <a name="82-step-by-step-implementation"></a>&nbsp;&nbsp;&nbsp;&nbsp; 8.2 Step by Step Implementation
 
 ### Step 1: Clone the Frontend Repository
 
@@ -246,7 +242,7 @@ This confirms that the unit test executed successfully using Jest.
 
 ---
 
-##      8.3 POC Conclusion
+## <a name="83-poc-conclusion"></a>&nbsp;&nbsp;&nbsp;&nbsp; 8.3 POC Conclusion
 
 This POC demonstrates how unit testing can be executed in a React frontend application using Jest. A test case was created and executed to verify that the application component renders successfully. This proves that React unit testing can be added as a CI check to validate frontend code before deployment.
 
