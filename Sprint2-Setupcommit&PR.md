@@ -16,7 +16,6 @@
 4. [Prerequisites](#4-prerequisites)
 5. [Workflow Diagram](#5-workflow-diagram)
 6. [Setting up a PR](#6-setting-up-a-pr)
-
    * 6.1 [Step-by-step guide to create a commit](#61-step-by-step-guide-to-create-a-commit)
    * 6.2 [Steps to create a PR](#62-steps-to-create-a-pr)
    * 6.3 [Merge a PR](#63-merge-a-pr)
