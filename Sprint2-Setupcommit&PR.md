@@ -25,15 +25,6 @@
 9. [Contact Information](#9-contact-information)
 10. [References](#10-references)
 
-* 3.1 [Step-by-step guide to create a commit](#31-step-by-step-guide-to-create-a-commit)
-* 3.2 [Steps to create a PR](#32-steps-to-create-a-pr)
-* 3.3 [Merge a PR](#33-merge-a-pr)
-
-4. [Conclusion](#4-conclusion)
-5. [FAQ](#5-faq)
-6. [Contact Information](#6-contact-information)
-7. [References](#7-references)
-
 ---
 
 # 1. Introduction
@@ -298,25 +289,25 @@ Following the Commit and Pull Request workflow helps maintain proper code review
 
 # 8. FAQ
 
-## 1. Why should developers avoid committing directly to main?
+###      1. Why should developers avoid committing directly to main?
 
-Direct commits to main can introduce unstable or unreviewed code. Feature branches and Pull Requests provide controlled development and review processes.
+         Direct commits to main can introduce unstable or unreviewed code. Feature branches and PR provide controlled development.
 
-## 2. What happens if merge conflicts occur?
+###      2. What happens if merge conflicts occur?
 
-Developers must pull the latest changes from main, resolve conflicts manually, and push the updated code again.
+         Developers must pull the latest changes from main, resolve conflicts manually, and push the updated code again.
 
-## 3. Who can merge a Pull Request?
+###      3. Who can merge a Pull Request?
 
-Only authorized reviewers, maintainers, or leads should merge Pull Requests into the main branch.
+         Only authorized reviewers, maintainers, or leads should merge Pull Requests into the main branch.
 
-## 4. What is the purpose of CI/CD checks?
+###      4. What is the purpose of CI/CD checks?
 
-CI/CD checks automatically validate code quality, build status, testing, and security before merging.
+         CI/CD checks automatically validate code quality, build status, testing, and security before merging.
 
-## 5. What is the difference between Commit and Pull Request?
+###      5. What is the difference between Commit and Pull Request?
 
-A Commit saves changes locally in Git history, whereas a Pull Request requests review and merging of those commits into another branch.
+         A Commit saves changes locally in Git history, whereas a Pull Request requests review and merging of those commits into another branch.
 
 ---
 
