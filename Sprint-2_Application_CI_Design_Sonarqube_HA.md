@@ -69,18 +69,9 @@ SonarQube High Availability (HA) ensures that the SonarQube service remains acce
 <img width="80%" height="70%" alt="image" src="https://github.com/user-attachments/assets/8b9b32fa-423b-463d-99ce-8a07852a1414" />
 
 
----
+### SonarQube HA Workflow
 
-*Workflow steps:*
-
-* Developer pushes code
-* CI/CD pipeline triggers SonarQube analysis
-* Request goes to Load Balancer
-* Load Balancer sends it to a working server
-* Server runs analysis using Compute Engine
-* Results go to PostgreSQL and Elasticsearch
-* Users see results on the dashboard
-* If a server fails, traffic goes to another server
+The workflow begins when a developer pushes code to the repository, which triggers the CI/CD pipeline for SonarQube analysis. The request is then sent to the Load Balancer, which forwards traffic to an available SonarQube server. The Compute Engine performs code analysis and stores results in PostgreSQL and Elasticsearch. Users can view analysis reports through the SonarQube dashboard. In case a server fails, the Load Balancer automatically redirects traffic to another active server, ensuring high availability and uninterrupted service.
 
 ---
 
