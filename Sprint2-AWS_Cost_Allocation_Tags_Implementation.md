@@ -39,8 +39,6 @@
 
 # 1. Introduction
 
-# 1. Introduction
-
 AWS Cost Allocation Tags are metadata labels (key-value pairs) applied to AWS resources to track and categorize cloud spending. When activated in the Billing Console, they appear in Cost Explorer and cost reports, enabling granular visibility into where money is being spent across teams, projects, and environments.
 
 ---
