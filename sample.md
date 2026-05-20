@@ -75,7 +75,8 @@ Visit `https://github.com` and sign in using your GitHub credentials.
 
 Create a new GitHub repository where the PR workflow configuration will be implemented.
 
-![2](<img width="1917" height="960" alt="image" src="https://github.com/user-attachments/assets/91b6dc4a-1fea-4320-8275-b947adb338c9" />)
+<img width="1917" height="960" alt="image" src="https://github.com/user-attachments/assets/4c19e5e8-281d-4493-9577-1ac1e4e838c5" />
+
 
 ---
 
@@ -83,7 +84,8 @@ Create a new GitHub repository where the PR workflow configuration will be imple
 
 Create a new branch named `feature-001` from the `main` branch.
 
-![3](https://github.com/user-attachments/assets/bfd033f0-b45e-4afd-8634-a6cc1644a7ff)
+<img width="1917" height="941" alt="image" src="https://github.com/user-attachments/assets/55ddc5ae-1483-4c18-82b8-9b81b95d8045" />
+
 
 ---
 
