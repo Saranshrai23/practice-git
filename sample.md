@@ -75,7 +75,7 @@ Visit `https://github.com` and sign in using your GitHub credentials.
 
 Create a new GitHub repository where the PR workflow configuration will be implemented.
 
-![2](https://github.com/user-attachments/assets/b11ab1ba-2f94-4b0b-9a6e-690d417f29d7)
+![2](<img width="1917" height="960" alt="image" src="https://github.com/user-attachments/assets/91b6dc4a-1fea-4320-8275-b947adb338c9" />)
 
 ---
 
