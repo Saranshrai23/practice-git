@@ -1,8 +1,6 @@
-# **Setup Commit & PR (Pull Request) Workflow**
+<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/18c1bea7-22ee-4e7c-97ae-3ce9a3bbb496" />
 
-<p align="center">
-  <img src="https://cdn.creazilla.com/icons/3214459/git-pull-request-icon-size_512.png" alt="Pull Request Icon" width="200"/>
-</p>
+# **Setup Commit & PR (Pull Request) Workflow**
 
 ## **Author Information**
 
