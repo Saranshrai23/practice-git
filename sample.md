@@ -18,15 +18,15 @@
 2. [Prerequisites](#2-prerequisites)
 3. [Commit & PR Workflow Strategy](#3-commit--pr-workflow-strategy)
 4. [Step-by-Step Instructions](#4-step-by-step-instructions)
-   4.1 [Log in to GitHub](#41-log-in-to-github)
-   4.2 [Create a Repository](#42-create-a-repository)
-   4.3 [Create a Feature Branch](#43-create-a-feature-branch)
-   4.4 [Make a Change in the Feature Branch](#44-make-a-change-in-the-feature-branch)
-   4.5 [Create a Pull Request (PR)](#45-create-a-pull-request-pr)
-   4.6 [Navigate to Branch Rules Configuration](#46-navigate-to-branch-rules-configuration)
-   4.7 [Enforce Reviewer Sign-Off Rules](#47-enforce-reviewer-sign-off-rules)
-   4.8 [Enforce Jenkins System Validation](#48-enforce-jenkins-system-validation)
-   4.9 [Restrict Merge Access to Lead](#49-restrict-merge-access-to-lead)
+   * [4.1 Log in to GitHub](#41-log-in-to-github)
+   * [4.2 Create a Repository](#42-create-a-repository)
+   * [4.3 Create a Feature Branch](#43-create-a-feature-branch)
+   * [4.4 Make a Change in the Feature Branch](#44-make-a-change-in-the-feature-branch)
+   * [4.5 Create a Pull Request (PR)](#45-create-a-pull-request-pr)
+   * [4.6 Navigate to Branch Rules Configuration](#46-navigate-to-branch-rules-configuration)
+   * [4.7 Enforce Reviewer Sign-Off Rules](#47-enforce-reviewer-sign-off-rules)
+   * [4.8 Enforce Jenkins System Validation](#48-enforce-jenkins-system-validation)
+   * [4.9 Restrict Merge Access to Lead](#49-restrict-merge-access-to-lead)
 5. [Conclusion](#5-conclusion)
 6. [Contact Information](#6-contact-information)
 7. [Reference Table](#7-reference-table)
@@ -41,10 +41,12 @@ This document explains how to configure a secure **Commit and Pull Request (PR) 
 
 # **2. Prerequisites**
 
-* GitHub repository with admin access
-* Jenkins server configured for CI validation
-* GitHub webhook integration with Jenkins
-* Users and reviewers added to the repository/team
+| Prerequisite | Description |
+|---|---|
+| GitHub Repository Access | GitHub repository with admin access to configure branch rules and PR settings |
+| Jenkins Server | Jenkins server configured for CI pipeline validation and PR build execution |
+| GitHub Webhook Integration | GitHub webhook integrated with Jenkins for automatic PR and push event triggering |
+| Repository Users & Reviewers | Users and reviewers added to the repository/team for approval and collaboration workflow |
 
 ---
 
@@ -63,15 +65,16 @@ This document explains how to configure a secure **Commit and Pull Request (PR) 
 
 # **4. Step-by-Step Instructions**
 
-## <a name="41-log-in-to-github"></a>     4.1 Log in to GitHub
+## <a name="41-log-in-to-github"></a>&nbsp;&nbsp;&nbsp;&nbsp;4.1 Log in to GitHub
 
 Visit `https://github.com` and sign in using your GitHub credentials.
 
-![1](https://github.com/user-attachments/assets/0e0e6015-6b1a-4ac1-a5f9-89402751839e)
+<img width="1907" height="911" alt="image" src="https://github.com/user-attachments/assets/113482c0-b12a-47ad-8fca-899dced88f0e" />
+
 
 ---
 
-## <a name="42-create-a-repository"></a>     4.2 Create a Repository
+## <a name="42-create-a-repository"></a>&nbsp;&nbsp;&nbsp;&nbsp;4.2 Create a Repository
 
 Create a new GitHub repository where the PR workflow configuration will be implemented.
 
@@ -80,44 +83,49 @@ Create a new GitHub repository where the PR workflow configuration will be imple
 
 ---
 
-## <a name="43-create-a-feature-branch"></a>     4.3 Create a Feature Branch
+## <a name="43-create-a-feature-branch"></a>&nbsp;&nbsp;&nbsp;&nbsp;4.3 Create a Feature Branch
 
-Create a new branch named `feature-001` from the `main` branch.
+Create a new branch named `feature-001` from the `main` branch. 
 
-<img width="1917" height="941" alt="image" src="https://github.com/user-attachments/assets/55ddc5ae-1483-4c18-82b8-9b81b95d8045" />
+<img width="1912" height="942" alt="image" src="https://github.com/user-attachments/assets/f4474c91-57a9-4431-ba7c-f090fdefefc3" />
+
+
+
+---
+
+## <a name="44-make-a-change-in-the-feature-branch"></a>&nbsp;&nbsp;&nbsp;&nbsp;4.4 Make a Change in the Feature Branch
+
+Switch to the feature-001 branch and make a small change—for example, add a new line of code. Commit this change to simulate a code update.
+
+<img width="1917" height="967" alt="image" src="https://github.com/user-attachments/assets/9a34e6b8-070f-48e9-a0fc-ebca1715e289" />
+
 
 
 ---
 
-## <a name="44-make-a-change-in-the-feature-branch"></a>     4.4 Make a Change in the Feature Branch
+## <a name="45-create-a-pull-request-pr"></a>&nbsp;&nbsp;&nbsp;&nbsp;4.5 Create a Pull Request (PR)
 
-Switch to the feature branch, make a code change, and commit the update.
+After committing the change, open a pull request from feature-001 to the main branch. This PR can currently be merged unless rules are set.
 
-![4](https://github.com/user-attachments/assets/9f0ecca1-7bd7-4fda-860b-f612074a6707)
+<img width="1916" height="960" alt="image" src="https://github.com/user-attachments/assets/b544b64d-b80c-4592-b3d4-1f451182b8d5" />
 
----
-
-## <a name="45-create-a-pull-request-pr"></a>     4.5 Create a Pull Request (PR)
-
-Open a Pull Request from `feature-001` to the `main` branch.
-
-![5](https://github.com/user-attachments/assets/10cab73a-c1f6-4ff4-b233-c2398694b4cf)
 
 ---
 
-## <a name="46-navigate-to-branch-rules-configuration"></a>     4.6 Navigate to Branch Rules Configuration
+## <a name="46-navigate-to-branch-rules-configuration"></a>&nbsp;&nbsp;&nbsp;&nbsp;4.6 Navigate to Branch Rules Configuration
 
-Go to:
+To enforce proper PR rules, Go to:
 
 `Repository → Settings → Branches → Add Rule`
 
 Configure branch protection rules for the `main` branch.
 
-![7](https://github.com/user-attachments/assets/59eeb11d-3a46-4be6-a478-5d465b6f09ef)
+<img width="1917" height="971" alt="image" src="https://github.com/user-attachments/assets/9403b7f5-0098-4cb3-aaa6-373466baafd9" />
+
 
 ---
 
-## <a name="47-enforce-reviewer-sign-off-rules"></a>     4.7 Enforce Reviewer Sign-Off Rules
+## <a name="47-enforce-reviewer-sign-off-rules"></a>&nbsp;&nbsp;&nbsp;&nbsp;4.7 Enforce Reviewer Sign-Off Rules
 
 Enable:
 
@@ -126,11 +134,12 @@ Enable:
 
 This ensures at least two reviewers approve the PR before merge.
 
-![image](https://github.com/user-attachments/assets/35b021c4-1b7a-4383-a39b-118e8ea21c4a)
+<img width="1917" height="895" alt="image" src="https://github.com/user-attachments/assets/c372d407-441a-4f17-a578-375f306e4ebb" />
+
 
 ---
 
-## <a name="48-enforce-jenkins-system-validation"></a>     4.8 Enforce Jenkins System Validation
+## <a name="48-enforce-jenkins-system-validation"></a>&nbsp;&nbsp;&nbsp;&nbsp;4.8 Enforce Jenkins System Validation
 
 Enable:
 
@@ -138,11 +147,12 @@ Enable:
 
 This ensures Jenkins validates build, test, and linting pipelines before merge approval.
 
-![image](https://github.com/user-attachments/assets/0771221b-12f8-4ece-8759-7ae3a9f5c215)
+<img width="1912" height="756" alt="image" src="https://github.com/user-attachments/assets/0f378309-7547-40da-afeb-d8680f06c49f" />
+
 
 ---
 
-## <a name="49-restrict-merge-access-to-lead"></a>     4.9 Restrict Merge Access to Lead
+## <a name="49-restrict-merge-access-to-lead"></a>&nbsp;&nbsp;&nbsp;&nbsp;4.9 Restrict Merge Access to Lead
 
 Enable:
 
@@ -150,7 +160,8 @@ Enable:
 
 Add Team Lead users so only authorized leads can merge PRs into `main`.
 
-![image](https://github.com/user-attachments/assets/2b6757f2-f354-4206-aaa2-e160cf1d29ca)
+<img width="982" height="492" alt="image" src="https://github.com/user-attachments/assets/7861d7a8-bbde-4b77-a978-917cd5d693c8" />
+
 
 ---
 
