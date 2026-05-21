@@ -45,11 +45,25 @@ This role helps automate Jenkins deployment, reduce manual configuration effort,
 
 # 4. Jenkins Ansible Role
 
-![Jenkins Ansible Role Architecture](sandbox:/mnt/data/a_clean_technical_infographic_documentation_slide.png)
+```text
+roles/
+└── jenkins/
+    ├── tasks/
+    ├── handlers/
+    ├── defaults/
+    ├── templates/
+    └── vars/
+```
 
----
+<details>
+<summary>Click to view Architecture image</summary>
 
-## <a name="41-architecture-flow"></a>     4.1 Architecture Flow
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/01648d30-5083-42e7-a8be-7fe435656926" />
+
+</details>
+
+
+## <a name="41-architecture-flow"></a>&nbsp;&nbsp;&nbsp;&nbsp;4.1 Architecture Flow
 
 1. The Ansible Control Node connects to the managed server using SSH.  
 2. The Jenkins Ansible role executes installation and configuration tasks sequentially.  
@@ -59,9 +73,9 @@ This role helps automate Jenkins deployment, reduce manual configuration effort,
 6. Jenkins becomes accessible through the browser on port `8080`.  
 7. Optional plugins, backups, and additional configurations can be integrated later.  
 
----
 
-## <a name="42-components-and-meaning"></a>     4.2 Components and Meaning
+## <a name="42-components-and-meaning"></a>&nbsp;&nbsp;&nbsp;&nbsp;4.2 Components and Meaning
+
 
 | Component | Meaning |
 |---|---|
@@ -72,11 +86,11 @@ This role helps automate Jenkins deployment, reduce manual configuration effort,
 | External Dependencies | Internet repositories, plugins, and optional backup storage required during setup. |
 | Jenkins Home | Directory where Jenkins stores jobs, configurations, and data. |
 
----
 
-## <a name="43-meaning-of-the-architecture"></a>     4.3 Meaning of the Architecture
+## <a name="43-meaning-of-the-architecture"></a>&nbsp;&nbsp;&nbsp;&nbsp;4.3 Meaning of the Architecture
 
 This architecture demonstrates how Ansible automates Jenkins installation and configuration using reusable roles and tasks. It helps maintain consistency, reduces manual effort, supports Infrastructure as Code (IaC), and simplifies Jenkins deployment across multiple environments.
+
 ---
 
 # 5. Best Practices
