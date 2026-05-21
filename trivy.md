@@ -26,8 +26,10 @@
 9. [Best Practices](#9-best-practices)
 10. [Recommendations](#10-recommendations)
 11. [Conclusion](#11-conclusion)
-12. [Contact Information](#12-contact-information)
-13. [References](#13-references)
+12. [POC Reference](#12-poc-reference)
+13. [Contact Information](#13-contact-information)
+14. [References](#14-references)
+
 
 ---
 
@@ -151,7 +153,15 @@ Trivy is a lightweight and efficient vulnerability scanning tool that helps iden
 
 ---
 
-# 12. Contact Information
+# 12. POC Reference
+
+| POC Name | Description |
+|----------|-------------|
+| [Dependency Scanning – TRIVY POC](https://github.com/Snaatak-Infra-Titans/Documentations/blob/SCRUM-133-saransh/VCS_Implementation/Setup/Workflow/README.md) | POC implementation and workflow for Trivy dependency vulnerability scanning |
+
+---
+
+# 13. Contact Information
 
 | Name        | Email                                                                           |
 | ----------- | ------------------------------------------------------------------------------- |
@@ -159,7 +169,7 @@ Trivy is a lightweight and efficient vulnerability scanning tool that helps iden
 
 ---
 
-# 13. References
+# 14. References
 
 | Reference                                                                        | Description                   |
 | -------------------------------------------------------------------------------- | ----------------------------- |
