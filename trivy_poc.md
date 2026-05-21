@@ -30,16 +30,7 @@
 
 # 1. Purpose
 
-The purpose of this POC is to demonstrate dependency vulnerability scanning using Trivy on Python-based services.
-
-Modern applications use multiple third-party libraries and packages. If these dependencies contain known vulnerabilities, they can introduce security risks into the application.
-
-This POC focuses on scanning:
-
-* Attendance API
-* Notification Worker
-
-The objective is to identify vulnerable dependencies, analyze security findings, and generate reports using Trivy filesystem scanning.
+The purpose of this POC is to demonstrate dependency vulnerability scanning using Trivy on Python-based services. The scan was performed on the Attendance API and Notification Worker to identify vulnerable dependencies and generate security reports using Trivy filesystem scanning.
 
 ---
 
