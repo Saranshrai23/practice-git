@@ -60,11 +60,12 @@ This role helps automate Jenkins deployment, reduce manual configuration effort,
 
 # 6. Advantages and Disadvantages
 
-| Advantages                                             | Disadvantages                                              |
-| Reduces manual Jenkins installation effort.            | Initial role creation requires time and testing.           |
-| Maintains consistent server configurations.            | Basic Ansible knowledge is required.                       |
-| Minimizes configuration mistakes.                      | Troubleshooting automation issues can be difficult.        |
-| Reusable across multiple environments.                 | Some environments may require customization.               |
+| Advantages | Disadvantages |
+|------------|--------------|
+| Reduces manual Jenkins installation effort. | Initial role creation requires time and testing. |
+| Maintains consistent server configurations. | Basic Ansible knowledge is required. |
+| Minimizes configuration mistakes. | Troubleshooting automation issues can be difficult. |
+| Reusable across multiple environments. | Some environments may require customization. |
 | Easy to manage using version control systems like Git. | External package dependencies must be maintained properly. |
 
 ---
