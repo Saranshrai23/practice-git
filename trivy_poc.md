@@ -1,3 +1,6 @@
+<img width="219" height="230" alt="image" src="https://github.com/user-attachments/assets/05fae82d-94a3-4561-ae64-25ab7ce1cf2c" />
+
+
 # Python Dependency Scanning – TRIVY POC
 
 ---
