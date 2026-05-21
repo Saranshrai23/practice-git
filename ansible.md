@@ -14,6 +14,9 @@
 2. [What is this Ansible Role?](#2-what-is-this-ansible-role)
 3. [Why Use This Role?](#3-why-use-this-role)
 4. [Jenkins Ansible Role](#4-jenkins-ansible-role)
+   - [4.1 Architecture Flow](#41-architecture-flow)
+   - [4.2 Components and Meaning](#42-components-and-meaning)
+   - [4.3 Meaning of the Architecture](#43-meaning-of-the-architecture)
 5. [Best Practices](#5-best-practices)
 6. [Advantages and Disadvantages](#6-advantages-and-disadvantages)
 7. [Conclusion](#7-conclusion)
@@ -42,8 +45,38 @@ This role helps automate Jenkins deployment, reduce manual configuration effort,
 
 # 4. Jenkins Ansible Role
 
-<img width="1887" height="918" alt="image" src="https://github.com/user-attachments/assets/7c8fc0d7-af46-47b4-aa78-5bfbffb42685" />
+![Jenkins Ansible Role Architecture](sandbox:/mnt/data/a_clean_technical_infographic_documentation_slide.png)
 
+---
+
+## <a name="41-architecture-flow"></a>     4.1 Architecture Flow
+
+1. The Ansible Control Node connects to the managed server using SSH.  
+2. The Jenkins Ansible role executes installation and configuration tasks sequentially.  
+3. Java is installed as a prerequisite for Jenkins.  
+4. Jenkins repository and packages are installed automatically.  
+5. Jenkins service is configured, started, and enabled.  
+6. Jenkins becomes accessible through the browser on port `8080`.  
+7. Optional plugins, backups, and additional configurations can be integrated later.  
+
+---
+
+## <a name="42-components-and-meaning"></a>     4.2 Components and Meaning
+
+| Component | Meaning |
+|---|---|
+| Control Node | Machine where Ansible is installed and playbooks are executed. |
+| Managed Node | Target server where Jenkins is installed and configured. |
+| Ansible Role | Collection of reusable tasks used to automate Jenkins setup. |
+| Jenkins Service | Main Jenkins application running as a system service. |
+| External Dependencies | Internet repositories, plugins, and optional backup storage required during setup. |
+| Jenkins Home | Directory where Jenkins stores jobs, configurations, and data. |
+
+---
+
+## <a name="43-meaning-of-the-architecture"></a>     4.3 Meaning of the Architecture
+
+This architecture demonstrates how Ansible automates Jenkins installation and configuration using reusable roles and tasks. It helps maintain consistency, reduces manual effort, supports Infrastructure as Code (IaC), and simplifies Jenkins deployment across multiple environments.
 ---
 
 # 5. Best Practices
