@@ -68,7 +68,8 @@ error: unable to contact snap store
 <details>
 <summary>Click to View Snap Installation Error</summary>
 
-<img width="900" alt="Snap installation error screenshot" src="PASTE_IMAGE_URL_HERE" />
+<img width="1462" height="102" alt="image" src="https://github.com/user-attachments/assets/f0aa2162-2211-403d-80a1-88774a59ac24" />
+
 
 </details>
 
@@ -88,7 +89,8 @@ sudo apt install wget apt-transport-https gnupg lsb-release -y
 <details>
 <summary>Click to View Package Update Output</summary>
 
-<img width="900" alt="Package update screenshot" src="PASTE_IMAGE_URL_HERE" />
+<img width="1901" height="692" alt="image" src="https://github.com/user-attachments/assets/83cabcd2-0ab4-4e0e-8c57-73ae9f32903c" />
+
 
 </details>
 
@@ -105,7 +107,8 @@ sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
 <details>
 <summary>Click to View GPG Key Setup</summary>
 
-<img width="900" alt="Trivy GPG key screenshot" src="PASTE_IMAGE_URL_HERE" />
+<img width="1242" height="67" alt="image" src="https://github.com/user-attachments/assets/a49fe3d4-f369-4fe7-ac1d-6e7e2c57875a" />
+
 
 </details>
 
@@ -127,7 +130,8 @@ deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/tri
 <details>
 <summary>Click to View Repository Setup</summary>
 
-<img width="900" alt="Trivy repository setup screenshot" src="PASTE_IMAGE_URL_HERE" />
+<img width="1890" height="72" alt="image" src="https://github.com/user-attachments/assets/0d84672b-14c6-46e8-b83c-f5d9907631d6" />
+
 
 </details>
 
@@ -149,7 +153,8 @@ trivy is already the newest version (0.70.0).
 <details>
 <summary>Click to View Trivy Installation Output</summary>
 
-<img width="900" alt="Trivy installation output screenshot" src="PASTE_IMAGE_URL_HERE" />
+<img width="1741" height="532" alt="image" src="https://github.com/user-attachments/assets/6903d496-2a90-4932-92cf-72ea2f5651fd" />
+
 
 </details>
 
@@ -170,7 +175,8 @@ Version: 0.70.0
 <details>
 <summary>Click to View Trivy Version Output</summary>
 
-<img width="900" alt="Trivy version screenshot" src="PASTE_IMAGE_URL_HERE" />
+<img width="1162" height="47" alt="image" src="https://github.com/user-attachments/assets/e39cf90b-1be5-4062-80be-b42e14e9ee9e" />
+
 
 </details>
 
@@ -196,7 +202,8 @@ Resolving deltas: 100% (66/66), done.
 <details>
 <summary>Click to View Attendance API Clone Output</summary>
 
-<img width="900" alt="Attendance API clone screenshot" src="PASTE_IMAGE_URL_HERE" />
+<img width="1366" height="187" alt="image" src="https://github.com/user-attachments/assets/4e80d6fd-b4fc-4d42-8ed0-ddbc4946a3ec" />
+
 
 </details>
 
@@ -228,7 +235,10 @@ Secrets: -
 <details>
 <summary>Click to View Attendance API Trivy Scan Output</summary>
 
-<img width="900" alt="Attendance API Trivy scan output screenshot" src="PASTE_IMAGE_URL_HERE" />
+<img width="1740" height="927" alt="image" src="https://github.com/user-attachments/assets/8176e2f8-6437-440e-a0c4-08f6e1176ea1" />
+
+<img width="1712" height="972" alt="image" src="https://github.com/user-attachments/assets/e639b6bb-b49d-430d-b573-2f96cfd3eba6" />
+
 
 </details>
 
@@ -257,7 +267,9 @@ Total: 18 (UNKNOWN: 0, LOW: 1, MEDIUM: 15, HIGH: 2, CRITICAL: 0)
 <details>
 <summary>Click to View Attendance API Generated Report</summary>
 
-<img width="900" alt="Attendance API generated report screenshot" src="PASTE_IMAGE_URL_HERE" />
+<img width="1612" height="506" alt="image" src="https://github.com/user-attachments/assets/a2661d51-d867-4cfa-b0cf-85e6357df945" />
+<img width="1072" height="962" alt="image" src="https://github.com/user-attachments/assets/c168a9cb-7b31-4105-a950-64b4d01a7429" />
+
 
 </details>
 
@@ -317,7 +329,8 @@ Receiving objects: 100% (13/13), done.
 <details>
 <summary>Click to View Notification Worker Clone Output</summary>
 
-<img width="900" alt="Notification Worker clone screenshot" src="PASTE_IMAGE_URL_HERE" />
+<img width="875" height="127" alt="image" src="https://github.com/user-attachments/assets/301d3151-ae20-4491-aee8-44861138247a" />
+
 
 </details>
 
@@ -349,7 +362,8 @@ Secrets: -
 <details>
 <summary>Click to View Notification Worker Trivy Scan Output</summary>
 
-<img width="900" alt="Notification Worker Trivy scan output screenshot" src="PASTE_IMAGE_URL_HERE" />
+<img width="1567" height="355" alt="image" src="https://github.com/user-attachments/assets/a2fc2dbe-6b56-43be-bc2c-ed611e615377" />
+
 
 </details>
 
@@ -380,7 +394,8 @@ Vulnerabilities: 0
 <details>
 <summary>Click to View Notification Worker Generated Report</summary>
 
-<img width="900" alt="Notification Worker generated report screenshot" src="PASTE_IMAGE_URL_HERE" />
+<img width="1697" height="352" alt="image" src="https://github.com/user-attachments/assets/fbe0e711-b12a-46b7-b358-989e8b2edaba" />
+
 
 </details>
 
