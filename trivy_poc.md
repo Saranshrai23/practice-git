@@ -1,4 +1,4 @@
-# Python Dependency Scanning – "TRIVY" POC
+# Python Dependency Scanning – TRIVY POC
 
 ---
 
@@ -13,189 +13,380 @@
 # Table of Contents
 
 1. [Purpose](#1-purpose)
-2. [Scan Architecture](#2-scan-architecture)
-3. [Environment Setup](#3-environment-setup)
-4. [Trivy Scan Workflow](#4-trivy-scan-workflow)
-5. [Attendance API Scan](#5-attendance-api-scan)
-6. [Notification Worker Scan](#6-notification-worker-scan)
-7. [Vulnerability Summary](#7-vulnerability-summary)
-8. [POC Validation](#8-poc-validation)
-9. [Conclusion](#9-conclusion)
-10. [Documentation Reference](#10-documentation-reference)
-11. [Contact Information](#11-contact-information)
-12. [References](#12-references)
-
-
----
-
-# 1. Purpose
-
-The purpose of this POC is to demonstrate dependency vulnerability scanning using Trivy on Python-based services. The scan was performed on the Attendance API and Notification Worker to identify vulnerable dependencies and generate security reports using Trivy filesystem scanning.
+2. [Purpose](#2-purpose)
+3. [Repositories Used](#3-repositories-used)
+4. [Environment Setup](#4-environment-setup)
+5. [Trivy Installation](#5-trivy-installation)
+6. [Attendance API Scan](#6-attendance-api-scan)
+7. [Notification Worker Scan](#7-notification-worker-scan)
+8. [Vulnerability Summary](#8-vulnerability-summary)
+9. [POC Validation](#9-poc-validation)
+10. [Conclusion](#10-conclusion)
+11. [Documentation Reference](#11-documentation-reference)
+12. [Contact Information](#12-contact-information)
+13. [References](#13-references)
 
 ---
 
-# 2. Scan Architecture
+# 1. Introduction
 
-<details>
-<summary>Click to View Scan Architecture</summary>
+Trivy is an open-source security scanning tool used to identify vulnerabilities in dependencies, containers, filesystems, and source code projects. It helps development and DevSecOps teams detect outdated or vulnerable packages before applications are deployed into production environments.
 
-<img width="420" height="338" alt="image" src="https://github.com/user-attachments/assets/93a15591-46ea-49ad-9a21-49525d6e628a" />
+In this POC, Trivy filesystem scanning is used to analyze Python-based microservices repositories and identify dependency-related security vulnerabilities.
 
-</details>
+---
+
+# 2. Purpose
+
+The purpose of this POC is to perform dependency vulnerability scanning on the Attendance API and Notification Worker repositories using Trivy filesystem scanning.
+
+---
+
+# 2. Repositories Used
+
+| Service             | Repository                                                                                                                 |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Attendance API      | [https://github.com/OT-MICROSERVICES/attendance-api.git](https://github.com/OT-MICROSERVICES/attendance-api.git)           |
+| Notification Worker | [https://github.com/OT-MICROSERVICES/notification-worker.git](https://github.com/OT-MICROSERVICES/notification-worker.git) |
 
 ---
 
 # 3. Environment Setup
 
-## <a name="31-install-trivy"></a>     3.1 Install Trivy
+The POC was executed on Ubuntu/WSL terminal. Initially, Trivy installation using Snap failed because the Snap store was not reachable.
 
 ```bash
 sudo snap install trivy
 ```
 
+Output:
+
+```bash
+error: unable to contact snap store
+```
+
+<details>
+<summary>Click to View Snap Installation Error</summary>
+
+<img width="900" alt="Snap installation error screenshot" src="PASTE_IMAGE_URL_HERE" />
+
+</details>
+
+Because Snap installation failed, Trivy was installed using the official APT repository method.
+
 ---
 
-## <a name="32-verify-installation"></a>     3.2 Verify Installation
+# 4. Trivy Installation
+
+## <a name="41-update-packages"></a>    4.1 Update Packages
+
+```bash
+sudo apt update
+sudo apt install wget apt-transport-https gnupg lsb-release -y
+```
+
+<details>
+<summary>Click to View Package Update Output</summary>
+
+<img width="900" alt="Package update screenshot" src="PASTE_IMAGE_URL_HERE" />
+
+</details>
+
+---
+
+## <a name="42-add-trivy-gpg-key"></a>    4.2 Add Trivy GPG Key
+
+```bash
+wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | \
+gpg --dearmor | \
+sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
+```
+
+<details>
+<summary>Click to View GPG Key Setup</summary>
+
+<img width="900" alt="Trivy GPG key screenshot" src="PASTE_IMAGE_URL_HERE" />
+
+</details>
+
+---
+
+## <a name="43-add-trivy-repository"></a>    4.3 Add Trivy Repository
+
+```bash
+echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main" | \
+sudo tee /etc/apt/sources.list.d/trivy.list
+```
+
+Output:
+
+```bash
+deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb noble main
+```
+
+<details>
+<summary>Click to View Repository Setup</summary>
+
+<img width="900" alt="Trivy repository setup screenshot" src="PASTE_IMAGE_URL_HERE" />
+
+</details>
+
+---
+
+## <a name="44-install-trivy"></a>    4.4 Install Trivy
+
+```bash
+sudo apt update
+sudo apt install trivy -y
+```
+
+Output:
+
+```bash
+trivy is already the newest version (0.70.0).
+```
+
+<details>
+<summary>Click to View Trivy Installation Output</summary>
+
+<img width="900" alt="Trivy installation output screenshot" src="PASTE_IMAGE_URL_HERE" />
+
+</details>
+
+---
+
+## <a name="45-verify-trivy-installation"></a>    4.5 Verify Trivy Installation
 
 ```bash
 trivy --version
 ```
 
-Example Output:
+Output:
 
 ```bash
-Version: 0.52.2
+Version: 0.70.0
 ```
 
 <details>
-<summary>Click to View Installation Output</summary>
+<summary>Click to View Trivy Version Output</summary>
 
-<img width="952" height="152" alt="image" src="https://github.com/user-attachments/assets/ec665ff9-420c-44f7-8556-c70a6b072526" />
+<img width="900" alt="Trivy version screenshot" src="PASTE_IMAGE_URL_HERE" />
 
 </details>
-
----
-
-# 4. Trivy Scan Workflow
-
-The dependency scan was performed using Trivy filesystem scanning.
-
-## Workflow Steps
-
-1. Navigate to project directory
-2. Run Trivy filesystem scan
-3. Analyze vulnerability findings
-4. Generate scan report
-5. Review detected vulnerabilities
 
 ---
 
 # 5. Attendance API Scan
 
-## <a name="51-navigate-to-project"></a>     5.1 Navigate to Project
+## <a name="51-clone-attendance-api"></a>    5.1 Clone Attendance API Repository
 
 ```bash
-cd ~/attendance
+cd ~
+git clone https://github.com/OT-MICROSERVICES/attendance-api.git
 ```
 
----
-
-## <a name="52-run-trivy-scan"></a>     5.2 Run Trivy Scan
+Output:
 
 ```bash
-trivy fs .
+Cloning into 'attendance-api'...
+Receiving objects: 100% (167/167), done.
+Resolving deltas: 100% (66/66), done.
 ```
 
 <details>
-<summary>Click to View Scan Output</summary>
+<summary>Click to View Attendance API Clone Output</summary>
 
-<img width="1483" height="532" alt="image" src="https://github.com/user-attachments/assets/81d1327c-24f5-4270-8af9-98460083f933" />
+<img width="900" alt="Attendance API clone screenshot" src="PASTE_IMAGE_URL_HERE" />
 
 </details>
 
 ---
 
-## <a name="53-generate-scan-report"></a>     5.3 Generate Scan Report
+## <a name="52-navigate-to-attendance-api"></a>    5.2 Navigate to Attendance API Directory
+
+```bash
+cd attendance-api
+```
+
+---
+
+## <a name="53-run-attendance-api-trivy-scan"></a>    5.3 Run Trivy Filesystem Scan
+
+```bash
+trivy fs .
+```
+
+Scan Summary:
+
+```bash
+Target: poetry.lock
+Type: poetry
+Vulnerabilities: 18
+Secrets: -
+```
+
+<details>
+<summary>Click to View Attendance API Trivy Scan Output</summary>
+
+<img width="900" alt="Attendance API Trivy scan output screenshot" src="PASTE_IMAGE_URL_HERE" />
+
+</details>
+
+---
+
+## <a name="54-generate-attendance-api-report"></a>    5.4 Generate Attendance API Report
 
 ```bash
 trivy fs --format table -o trivy_attendance_report.txt .
 ```
 
+---
+
+## <a name="55-view-attendance-api-report"></a>    5.5 View Attendance API Report
+
+```bash
+cat trivy_attendance_report.txt
+```
+
+Report Result:
+
+```bash
+Total: 18 (UNKNOWN: 0, LOW: 1, MEDIUM: 15, HIGH: 2, CRITICAL: 0)
+```
+
 <details>
-<summary>Click to View Generated Report</summary>
+<summary>Click to View Attendance API Generated Report</summary>
 
-<img width="1278" height="892" alt="image" src="https://github.com/user-attachments/assets/86187476-2f9c-40b3-9afa-9b60e84db060" />
-
-<img width="1283" height="151" alt="image" src="https://github.com/user-attachments/assets/02d37463-08d2-47cd-84ea-ae9eba27c2b0" />
+<img width="900" alt="Attendance API generated report screenshot" src="PASTE_IMAGE_URL_HERE" />
 
 </details>
 
 ---
 
-## <a name="54-scan-result"></a>     5.4 Scan Result
+## <a name="56-attendance-api-scan-result"></a>    5.6 Attendance API Scan Result
 
 ### Target Scanned
 
 ```bash
-attendance_api/poetry.lock
+poetry.lock
 ```
 
 ### Vulnerability Summary
 
 | Severity | Count |
-| -------- | ----- |
-| Low      | 1     |
-| Medium   | 11    |
-| High     | 1     |
-| Critical | 0     |
-| Total    | 13    |
+| -------- | ----: |
+| Unknown  |     0 |
+| Low      |     1 |
+| Medium   |    15 |
+| High     |     2 |
+| Critical |     0 |
+| Total    |    18 |
 
 ### Detected Vulnerable Libraries
 
-| Library  | Vulnerability  |
-| -------- | -------------- |
-| Flask    | CVE-2026-27205 |
-| Jinja2   | CVE-2024-22195 |
-| Werkzeug | CVE-2024-34069 |
+| Library  | Installed Version | Vulnerability Examples                                                                                         | Severity    |
+| -------- | ----------------: | -------------------------------------------------------------------------------------------------------------- | ----------- |
+| flask    |             2.3.2 | CVE-2026-27205                                                                                                 | Low         |
+| jinja2   |             3.1.2 | CVE-2024-22195, CVE-2024-34064, CVE-2024-56201, CVE-2024-56326, CVE-2025-27516                                 | Medium      |
+| mistune  |             3.0.1 | CVE-2026-33079, CVE-2026-44708, CVE-2026-44896, CVE-2026-44897                                                 | High/Medium |
+| pytest   |             7.4.0 | CVE-2025-71176                                                                                                 | Medium      |
+| werkzeug |             2.3.6 | CVE-2024-34069, CVE-2023-46136, CVE-2024-49766, CVE-2024-49767, CVE-2025-66221, CVE-2026-21860, CVE-2026-27199 | High/Medium |
+
+### Observation
+
+The Attendance API scan detected vulnerabilities mainly in Python dependencies listed inside `poetry.lock`. The highest severity found was **High**, and the vulnerable packages should be upgraded to the fixed versions suggested by Trivy.
 
 ---
 
 # 6. Notification Worker Scan
 
-## <a name="61-navigate-to-project"></a>     6.1 Navigate to Project
+## <a name="61-clone-notification-worker"></a>    6.1 Clone Notification Worker Repository
 
 ```bash
-cd ~/notification-worker
+cd ~
+git clone https://github.com/OT-MICROSERVICES/notification-worker.git
 ```
 
----
-
-## <a name="62-run-trivy-scan"></a>     6.2 Run Trivy Scan
+Output:
 
 ```bash
-trivy fs .
-```
-
----
-
-## <a name="63-generate-report"></a>     6.3 Generate Report
-
-```bash
-trivy fs --format table -o trivy_notification_report.txt .
+Cloning into 'notification-worker'...
+Receiving objects: 100% (13/13), done.
 ```
 
 <details>
-<summary>Click to View Notification Worker Report</summary>
+<summary>Click to View Notification Worker Clone Output</summary>
 
-<img width="1600" height="406" alt="image" src="https://github.com/user-attachments/assets/63194a51-1839-4b3d-842a-00b21b3bd02f" />
-
-<img width="1600" height="180" alt="image" src="https://github.com/user-attachments/assets/e11f1578-7667-4723-96f4-420902dca47f" />
+<img width="900" alt="Notification Worker clone screenshot" src="PASTE_IMAGE_URL_HERE" />
 
 </details>
 
 ---
 
-## <a name="64-scan-result"></a>     6.4 Scan Result
+## <a name="62-navigate-to-notification-worker"></a>    6.2 Navigate to Notification Worker Directory
+
+```bash
+cd notification-worker
+```
+
+---
+
+## <a name="63-run-notification-worker-trivy-scan"></a>    6.3 Run Trivy Filesystem Scan
+
+```bash
+trivy fs .
+```
+
+Scan Summary:
+
+```bash
+Target: requirements.txt
+Type: pip
+Vulnerabilities: 0
+Secrets: -
+```
+
+<details>
+<summary>Click to View Notification Worker Trivy Scan Output</summary>
+
+<img width="900" alt="Notification Worker Trivy scan output screenshot" src="PASTE_IMAGE_URL_HERE" />
+
+</details>
+
+---
+
+## <a name="64-generate-notification-worker-report"></a>    6.4 Generate Notification Worker Report
+
+```bash
+trivy fs --format table -o trivy_notification_report.txt .
+```
+
+---
+
+## <a name="65-view-notification-worker-report"></a>    6.5 View Notification Worker Report
+
+```bash
+cat trivy_notification_report.txt
+```
+
+Report Result:
+
+```bash
+Target: requirements.txt
+Type: pip
+Vulnerabilities: 0
+```
+
+<details>
+<summary>Click to View Notification Worker Generated Report</summary>
+
+<img width="900" alt="Notification Worker generated report screenshot" src="PASTE_IMAGE_URL_HERE" />
+
+</details>
+
+---
+
+## <a name="66-notification-worker-scan-result"></a>    6.6 Notification Worker Scan Result
 
 ### Target Scanned
 
@@ -206,61 +397,57 @@ requirements.txt
 ### Vulnerability Summary
 
 | Severity | Count |
-| -------- | ----- |
-| Low      | 0     |
-| Medium   | 0     |
-| High     | 0     |
-| Critical | 0     |
+| -------- | ----: |
+| Unknown  |     0 |
+| Low      |     0 |
+| Medium   |     0 |
+| High     |     0 |
+| Critical |     0 |
+| Total    |     0 |
 
-### Result
+### Observation
 
-```bash
-Clean (No vulnerabilities detected)
-```
+The Notification Worker scan completed successfully and no dependency vulnerabilities were detected in `requirements.txt`.
 
 ---
 
 # 7. Vulnerability Summary
 
-| Service             | Vulnerability Status        |
-| ------------------- | --------------------------- |
-| Attendance API      | 13 vulnerabilities detected |
-| Notification Worker | No vulnerabilities detected |
-
-Most vulnerabilities were caused by outdated Python dependencies.
+| Service             | Target File      | Package Type | Vulnerability Status     | Total Findings |
+| ------------------- | ---------------- | ------------ | ------------------------ | -------------: |
+| Attendance API      | poetry.lock      | poetry       | Vulnerabilities detected |             18 |
+| Notification Worker | requirements.txt | pip          | Clean                    |              0 |
 
 ---
 
 # 8. POC Validation
 
-| Validation Check                        | Status |
-| --------------------------------------- | ------ |
-| Trivy Installed Successfully            | Passed |
-| Filesystem Scan Executed                | Passed |
-| Report Generated Successfully           | Passed |
-| Vulnerabilities Detected                | Passed |
-| Notification Worker Security Validation | Passed |
+| Validation Check                                   | Status |
+| -------------------------------------------------- | ------ |
+| Snap installation issue identified                 | Passed |
+| Trivy installed using APT repository               | Passed |
+| Trivy version verified as 0.70.0                   | Passed |
+| Attendance API repository cloned successfully      | Passed |
+| Attendance API filesystem scan executed            | Passed |
+| Attendance API report generated                    | Passed |
+| Notification Worker repository cloned successfully | Passed |
+| Notification Worker filesystem scan executed       | Passed |
+| Notification Worker report generated               | Passed |
+| Vulnerability results reviewed                     | Passed |
 
 ---
 
 # 9. Conclusion
 
-Dependency vulnerability scanning was successfully performed using Trivy.
-
-Key observations:
-
-* Attendance API contains multiple vulnerable dependencies.
-* Notification Worker dependencies are secure.
-* Updating outdated libraries will reduce the application attack surface.
-* Trivy can be integrated into CI/CD pipelines for continuous security monitoring.
+The Trivy dependency scanning POC was completed successfully. Attendance API contained 18 dependency vulnerabilities, while Notification Worker showed no vulnerabilities. The vulnerable Attendance API packages should be upgraded as per Trivy fixed-version recommendations, and Trivy can be integrated into the CI/CD pipeline for continuous dependency security scanning.
 
 ---
 
 # 10. Documentation Reference
 
-| Document Name | Description |
-|--------------|-------------|
-| [Python Dependency Scanning – TRIVY Documentation](https://github.com/Snaatak-Infra-Titans/Documentations/blob/SCRUM-133-saransh/VCS_Implementation/Setup/Workflow/README.md) | Complete documentation covering Trivy workflow, comparison, best practices, and recommendations |
+| Document Name                                                    | Description                                                                                     |
+| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| [Dependency Scanning – TRIVY POC](PASTE_DOCUMENTATION_LINK_HERE) | POC documentation for scanning Attendance API and Notification Worker dependencies using Trivy. |
 
 ---
 
@@ -274,9 +461,9 @@ Key observations:
 
 # 12. References
 
-| Reference                                                                        | Description                   |
-| -------------------------------------------------------------------------------- | ----------------------------- |
-| [https://trivy.dev/latest/docs/](https://trivy.dev/latest/docs/)                 | Official Trivy Documentation  |
-| [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/) | OWASP Security Best Practices |
-| [https://docs.python.org/3/](https://docs.python.org/3/)                         | Python Official Documentation |
-
+| Reference                                                                         | Description                                                  |
+| --------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| [Trivy Official Documentation](https://trivy.dev/latest/docs/)                    | Official documentation for Trivy installation and scanning.  |
+| [Trivy Filesystem Scanning](https://trivy.dev/latest/docs/target/filesystem/)     | Reference for scanning local project files using `trivy fs`. |
+| [OWASP Dependency-Check Concept](https://owasp.org/www-project-dependency-check/) | Dependency vulnerability scanning concept reference.         |
+| [OWASP Top 10](https://owasp.org/www-project-top-ten/)                            | Common web application security risk reference.              |
