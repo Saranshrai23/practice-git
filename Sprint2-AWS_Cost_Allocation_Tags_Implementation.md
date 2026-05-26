@@ -15,9 +15,9 @@
 3. [Benefits of AWS Cost Allocation Tags](#3-benefits-of-aws-cost-allocation-tags)
 4. [Prerequisites & Workflow](#4-prerequisites--workflow)
 5. [Tagging Strategy](#5-tagging-strategy)
-   * [5.1 Tags Used in this POC](#51-tags-used-in-this-poc)
-   * [5.2 AWS Cost Allocation Tags Workflow](#52-aws-cost-allocation-tags-workflow)
-   * [5.3 Workflow Explanation](#53-workflow-explanation)
+   * &nbsp;&nbsp;&nbsp;&nbsp; [5.1 Tags Used in this POC](#-51-tags-used-in-this-poc)
+   * &nbsp;&nbsp;&nbsp;&nbsp; [5.2 AWS Cost Allocation Tags Workflow](#-52-aws-cost-allocation-tags-workflow)
+   * &nbsp;&nbsp;&nbsp;&nbsp; [5.3 Workflow Explanation](#-53-workflow-explanation)
 6. [Resource Tagging Implementation](#6-resource-tagging-implementation)
    * &nbsp;&nbsp;&nbsp;&nbsp; [6.1 EC2 Instance Tags](#-61-ec2-instance-tags)
    * &nbsp;&nbsp;&nbsp;&nbsp; [6.2 RDS Database Tags](#-62-rds-database-tags)
@@ -116,7 +116,7 @@ The following prerequisites were required before implementing AWS Cost Allocatio
 
 A standardized tagging strategy was implemented for AWS resources.
 
-##      5.1 Tags Used in this POC
+##      5.1 Tags Used in this POC
 
 | Tag Key     | Value    |
 | ----------- | -------- |
@@ -127,7 +127,7 @@ A standardized tagging strategy was implemented for AWS resources.
 
 This tagging structure helps AWS group cloud costs based on projects and ownership.
 
-##      5.2 AWS Cost Allocation Tags Workflow
+##      5.2 AWS Cost Allocation Tags Workflow
 
 ```mermaid
 flowchart LR
@@ -146,8 +146,7 @@ flowchart LR
 
     G --> H[Optimize AWS Spending]
 ```
-
-##      5.3 Workflow Explanation
+##      5.3 Workflow Explanation
 
 The workflow begins by applying standardized tags to AWS resources such as EC2, RDS, and S3. After tagging, the required Cost Allocation Tags are activated in the AWS Billing Console. AWS then processes billing data using these tags, which becomes available in AWS Cost Explorer. Finally, tagged cost reports are generated to analyze project-wise, environment-wise, and team-wise cloud spending for cost optimization and governance.
 
