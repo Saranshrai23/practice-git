@@ -21,7 +21,8 @@
 6. [Advantages and Disadvantages](#6-advantages-and-disadvantages)
 7. [Conclusion](#7-conclusion)
 8. [Contact Information](#8-contact-information)
-9. [References](#9-references)
+9. [POC for Jenkins Setup](#9-poc-for-jenkins-setup)
+10. [References](#10-references)
 
 ---
 
@@ -131,7 +132,15 @@ This Jenkins Ansible role provides a simple and reusable way to automate Jenkins
 
 ---
 
-# 9. References
+# 9. POC for Jenkins Setup
+
+| Title | Description |
+|---|---|
+| [Jenkins Setup POC Documentation](https://github.com/Snaatak-Infra-Titans/Documentations) | This POC demonstrates automated Jenkins installation and configuration using Ansible roles, including architecture flow, reusable role structure, service setup, and Infrastructure as Code (IaC) practices. |
+
+---
+
+# 10. References
 
 | Descriptions                   | Links                                                                                                                                                                  |
 | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
