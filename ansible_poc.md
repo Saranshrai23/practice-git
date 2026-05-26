@@ -25,8 +25,8 @@
    * [4.9 Get Initial Admin Password](#49-get-initial-admin-password)
    * [4.10 Access Jenkins in Browser](#410-access-jenkins-in-browser)
    * [4.11 Complete Jenkins Setup](#411-complete-jenkins-setup)
-5. [Validation](#5-validation)
-6. [Screenshot Placeholders](#6-screenshot-placeholders)
+5. [Jenkins Workflow Diagram](#5-jenkins-workflow-diagram)
+6. [Validation](#6-validation)
 7. [Best Practices](#7-best-practices)
 8. [Conclusion](#8-conclusion)
 9. [Contact Information](#9-contact-information)
@@ -67,6 +67,15 @@ The objective of this POC is to install and configure Jenkins successfully on Ub
 sudo apt update
 ```
 
+<details>
+<summary>Click to View Update System Packages</summary>
+
+<img width="1918" height="1007" alt="image" src="https://github.com/user-attachments/assets/dd1c4ff3-82c7-456c-a64d-3822492fee10" />
+
+
+</details>
+
+
 This command updates the package index and ensures the latest package information is available.
 
 ---
@@ -77,11 +86,27 @@ This command updates the package index and ensures the latest package informatio
 sudo apt install fontconfig openjdk-21-jre -y
 ```
 
+<details>
+<summary>Click to View Install Java</summary>
+
+<img width="1917" height="968" alt="image" src="https://github.com/user-attachments/assets/00a4baa0-fe3d-48c3-9585-3e426f774146" />
+
+</details>
+
+
 Verify Java installation:
 
 ```bash
 java -version
 ```
+
+<details>
+<summary>Click to View Verify Java installation</summary>
+
+<img width="957" height="95" alt="image" src="https://github.com/user-attachments/assets/094ccde5-802f-4338-a189-21faebffb8d7" />
+
+
+</details>
 
 Expected output:
 
@@ -98,6 +123,15 @@ sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
 https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key
 ```
 
+<details>
+<summary>Click to View Added Jenkins Repository Key</summary>
+
+<img width="1880" height="283" alt="image" src="https://github.com/user-attachments/assets/1eef7d4c-78a7-4c12-83ba-935f17b8948a" />
+
+
+</details>
+
+
 This command downloads and stores the Jenkins GPG repository key securely.
 
 ---
@@ -110,6 +144,15 @@ echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc] https://pkg.jenkins.
 
 This adds the Jenkins repository to the Ubuntu package source list.
 
+<details>
+<summary>Click to View Added Jenkins Repository</summary>
+
+<img width="1897" height="70" alt="image" src="https://github.com/user-attachments/assets/99bb0d0e-fd65-431e-9db5-6126595c94fd" />
+
+
+</details>
+
+
 ---
 
 ## <a name="45-install-jenkins"></a>    4.5 Install Jenkins
@@ -121,6 +164,14 @@ sudo apt install jenkins -y
 
 This installs the Jenkins package and its dependencies.
 
+<details>
+<summary>Click to View Install Jenkins</summary>
+
+<img width="1873" height="958" alt="image" src="https://github.com/user-attachments/assets/d3d7df82-c8f2-4fcb-ac3b-30307c854d8f" />
+
+
+</details>
+
 ---
 
 ## <a name="46-start-and-enable-jenkins"></a>    4.6 Start and Enable Jenkins
@@ -131,6 +182,14 @@ sudo systemctl enable jenkins
 ```
 
 This starts the Jenkins service and ensures it starts automatically after reboot.
+
+<details>
+<summary>Click to View Verify The Start and Enable Jenkins</summary>
+
+<img width="1348" height="135" alt="image" src="https://github.com/user-attachments/assets/3ae0b9d4-5e9d-42f8-9f32-c4d9e12b4b2c" />
+
+
+</details>
 
 ---
 
@@ -148,6 +207,14 @@ active (running)
 
 This validates that Jenkins is running successfully.
 
+<details>
+<summary>Click to View Verify Jenkins Status</summary>
+
+<img width="1907" height="522" alt="image" src="https://github.com/user-attachments/assets/2c00fdf8-bc90-4376-bdf6-db55e9086947" />
+
+
+</details>
+
 ---
 
 ## <a name="48-allow-jenkins-port"></a>    4.8 Allow Jenkins Port
@@ -159,6 +226,15 @@ sudo ufw status
 
 This allows incoming traffic on Jenkins default port `8080`.
 
+<details>
+<summary>Click to View Verify - Allow Jenkins Port</summary>
+
+<img width="702" height="157" alt="image" src="https://github.com/user-attachments/assets/6da6e0d4-e5cf-4288-8644-bad9bd2c8981" />
+<img width="1918" height="962" alt="image" src="https://github.com/user-attachments/assets/11dd726d-f3fb-430d-a167-9375b0fb0503" />
+
+
+</details>
+
 ---
 
 ## <a name="49-get-initial-admin-password"></a>    4.9 Get Initial Admin Password
@@ -168,6 +244,14 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
 This retrieves the Jenkins initial admin password required for first-time login.
+
+<details>
+<summary>Click to View Verify Java installation</summary>
+
+<img width="1052" height="88" alt="image" src="https://github.com/user-attachments/assets/0d931eaf-14a4-4349-a8c8-07d460625d04" />
+
+
+</details>
 
 ---
 
@@ -181,6 +265,22 @@ http://<server-public-ip>:8080
 
 The Jenkins unlock page should appear.
 
+<details>
+<summary>Click to View Verify Java installation</summary>
+
+<img width="1907" height="972" alt="image" src="https://github.com/user-attachments/assets/dc300f57-222a-4fd6-9e8b-21c7a9ea4cd3" />
+
+<img width="1910" height="957" alt="image" src="https://github.com/user-attachments/assets/ad50338f-80b9-4ed0-a5e1-87d323833f6d" />
+
+<img width="1918" height="975" alt="image" src="https://github.com/user-attachments/assets/c2b504c9-43a6-4cd7-8a71-56cbf0a84d5e" />
+
+<img width="1917" height="957" alt="image" src="https://github.com/user-attachments/assets/ab9b6c10-552b-4a8a-bdfd-5ef3fe75867c" />
+
+<img width="1918" height="972" alt="image" src="https://github.com/user-attachments/assets/17a5c79d-33ac-4060-af62-282c8645bf00" />
+
+
+</details>
+
 ---
 
 ## <a name="411-complete-jenkins-setup"></a>    4.11 Complete Jenkins Setup
@@ -193,7 +293,114 @@ The Jenkins unlock page should appear.
 
 ---
 
-# 5. Validation
+# 5. Jenkins Workflow Diagram
+
+The following workflow explains the complete Jenkins setup process starting from server preparation to accessing the Jenkins dashboard in the browser.
+
+```mermaid
+flowchart TB
+
+%% ---------------- SERVER PREPARATION ---------------- %%
+subgraph SERVER_PREPARATION["Server Preparation"]
+    
+    A["🖥️ Ubuntu Server"]
+
+    B["📦 Update System Packages
+    sudo apt update"]
+
+    C["☕ Install Java Runtime
+    OpenJDK 21"]
+
+    A --> B --> C
+
+end
+
+%% ---------------- JENKINS INSTALLATION ---------------- %%
+subgraph JENKINS_INSTALLATION["Jenkins Installation"]
+
+    D["🔐 Add Jenkins GPG Key"]
+
+    E["📁 Add Jenkins Repository"]
+
+    F["⚙️ Install Jenkins Package
+    sudo apt install jenkins -y"]
+
+    D --> E --> F
+
+end
+
+%% ---------------- SERVICE CONFIGURATION ---------------- %%
+subgraph SERVICE_CONFIGURATION["Service Configuration"]
+
+    G["🚀 Start Jenkins Service
+    systemctl start jenkins"]
+
+    H["🔄 Enable Jenkins at Boot
+    systemctl enable jenkins"]
+
+    I["✅ Verify Jenkins Status
+    systemctl status jenkins"]
+
+    G --> H --> I
+
+end
+
+%% ---------------- NETWORK CONFIGURATION ---------------- %%
+subgraph NETWORK_CONFIGURATION["Network Configuration"]
+
+    J["🌐 Allow Firewall Port 8080
+    sudo ufw allow 8080"]
+
+end
+
+%% ---------------- JENKINS ACCESS ---------------- %%
+subgraph JENKINS_ACCESS["Jenkins Initial Setup"]
+
+    K["🔑 Retrieve Initial Admin Password"]
+
+    L["🌍 Access Jenkins UI
+    http://server-ip:8080"]
+
+    M["🧩 Install Suggested Plugins"]
+
+    N["👤 Create Jenkins Admin User"]
+
+    O["🎉 Jenkins Dashboard Ready"]
+
+    K --> L --> M --> N --> O
+
+end
+
+%% ---------------- MAIN FLOW ---------------- %%
+C --> D
+F --> G
+I --> J
+J --> K
+```
+
+## Workflow Explanation
+
+| Step | Description |
+|------|-------------|
+| Ubuntu Server | Jenkins setup starts on an Ubuntu server with sudo access. |
+| Update System Packages | `sudo apt update` refreshes package metadata from Ubuntu repositories. |
+| Install Java Runtime | Jenkins requires Java to run because Jenkins is Java-based software. |
+| Add Jenkins GPG Key | The Jenkins repository signing key is added for package verification and security. |
+| Add Jenkins Repository | Official Jenkins repository is added to Ubuntu package sources. |
+| Install Jenkins Package | Jenkins package and dependencies are installed using APT package manager. |
+| Start Jenkins Service | Jenkins service is started using `systemctl start jenkins`. |
+| Enable Jenkins Service | Ensures Jenkins automatically starts after server reboot. |
+| Verify Jenkins Status | Validates Jenkins is running successfully using systemctl status. |
+| Allow Port 8080 | Firewall rule is added so Jenkins UI can be accessed externally. |
+| Retrieve Initial Admin Password | Jenkins generates a one-time admin password during first startup. |
+| Access Jenkins in Browser | User opens Jenkins web interface using server public IP and port `8080`. |
+| Install Suggested Plugins | Jenkins installs default recommended plugins for CI/CD operations. |
+| Create Admin User | First administrator account is created for Jenkins access management. |
+| Jenkins Dashboard Ready | Jenkins setup is completed successfully and dashboard becomes accessible. |
+
+---
+
+# 6. Validation
 
 | Validation Point  | Command / Check                 | Expected Output                  |
 | ----------------- | ------------------------------- | -------------------------------- |
