@@ -1,3 +1,6 @@
+<img width="224" height="224" alt="image" src="https://github.com/user-attachments/assets/11afa28a-e15b-4d27-b522-bffd3fed8b41" />
+
+
 # Ansible Role: Jenkins Setup Documentation
 
 ---
