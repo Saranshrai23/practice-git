@@ -170,14 +170,16 @@ The EC2 instance was tagged using the defined tagging strategy.
 <details>
 <summary>Click to Expand EC2 Tags Screenshot</summary>
 
-<img width="2880" height="1800" alt="AWS-EC2-tags" src="https://github.com/user-attachments/assets/4b21ae61-3f71-4a48-bf79-febe72cbfb89" />
+<img width="1918" height="958" alt="image" src="https://github.com/user-attachments/assets/7d7f41c6-513d-4f34-9afd-9e4694e125e9" />
+
 
 </details>
 
 <details>
 <summary>Click to Expand EC2 Tags Screenshot</summary>
 
-<img width="2880" height="1800" alt="AWS-EC2-tags" src="https://github.com/user-attachments/assets/4b21ae61-3f71-4a48-bf79-febe72cbfb89" />
+<img width="1617" height="378" alt="image" src="https://github.com/user-attachments/assets/47085a91-a33f-465d-86b8-3c70518a0f66" />
+
 
 </details>
 
@@ -199,14 +201,7 @@ The RDS database was also tagged using the same tagging structure.
 <details>
 <summary>Click to Expand RDS Tags Screenshot</summary>
 
-<img width="2880" height="1800" alt="RDS-tags" src="https://github.com/user-attachments/assets/b9833f30-e294-48b6-90f5-bb19ef4fde84" />
-
-</details>
-
-<details>
-<summary>Click to Expand RDS Tags Screenshot</summary>
-
-<img width="2880" height="1800" alt="RDS-tags" src="https://github.com/user-attachments/assets/b9833f30-e294-48b6-90f5-bb19ef4fde84" />
+<img width="1946" height="970" alt="image" src="https://github.com/user-attachments/assets/5577340c-e5c2-4746-9d3f-b087004532d3" />
 
 </details>
 
@@ -228,16 +223,12 @@ Tags were added to the S3 bucket to track storage-related costs.
 <details>
 <summary>Click to Expand S3 Bucket Tags Screenshot</summary>
 
-<img width="2880" height="1800" alt="S3-tags" src="https://github.com/user-attachments/assets/d990f577-29c0-42c6-b10d-748527f3bac2" />
+<img width="1918" height="968" alt="image" src="https://github.com/user-attachments/assets/61631cff-0eb6-4969-93e4-704519da6f7b" />
+
+<img width="1915" height="967" alt="image" src="https://github.com/user-attachments/assets/35264ac5-620c-429e-adf5-c171e66fd6b9" />
 
 </details>
 
-<details>
-<summary>Click to Expand S3 Bucket Tags Screenshot</summary>
-
-<img width="2880" height="1800" alt="S3-tags" src="https://github.com/user-attachments/assets/d990f577-29c0-42c6-b10d-748527f3bac2" />
-
-</details>
 
 ---
 
@@ -264,7 +255,12 @@ Once activated, AWS starts processing billing data using these tags.
 <details>
 <summary>Click to Expand Cost Allocation Activation Screenshot</summary>
 
-<img width="2880" height="1800" alt="Cost-Allocation" src="https://github.com/user-attachments/assets/0066029e-e8cc-466e-be34-3c19c9257661" />
+<img width="1914" height="993" alt="image" src="https://github.com/user-attachments/assets/7fd62e4c-1357-4265-a861-2bd87ef74325" />
+
+<img width="1918" height="957" alt="image" src="https://github.com/user-attachments/assets/2f6f34f7-e788-44e2-9faa-ee6cf8fa6f3d" />
+
+<img width="1920" height="964" alt="image" src="https://github.com/user-attachments/assets/6251ad6d-39bb-4508-9bff-236d1cb86153" />
+
 
 </details>
 
