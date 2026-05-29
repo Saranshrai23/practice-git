@@ -292,7 +292,8 @@ This configuration groups AWS spending based on the Project tag.
 <details>
 <summary>Click to Expand Cost Explorer Screenshot</summary>
 
-<img width="2871" height="1481" alt="Cost-Explorer" src="https://github.com/user-attachments/assets/d3881a22-4e6c-4f09-beee-9c269e3dc16b" />
+<img width="1714" height="918" alt="image" src="https://github.com/user-attachments/assets/04adee94-33ad-454b-9296-0b937766749d" />
+
 
 </details>
 
