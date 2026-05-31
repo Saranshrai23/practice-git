@@ -292,7 +292,7 @@ This configuration groups AWS spending based on the Project tag.
 <details>
 <summary>Click to Expand Cost Explorer Screenshot</summary>
 
-<img width="1714" height="918" alt="image" src="https://github.com/user-attachments/assets/04adee94-33ad-454b-9296-0b937766749d" />
+<img width="1911" height="960" alt="image" src="https://github.com/user-attachments/assets/7c0a5388-f086-48dd-b704-944dc6e27b7b" />
 
 
 </details>
@@ -316,7 +316,10 @@ AWS Cost Explorer allows exporting billing reports for analysis and auditing.
 <details>
 <summary>Click to Expand Cost Report Screenshot</summary>
 
-<img width="2880" height="1800" alt="Cost-Report" src="https://github.com/user-attachments/assets/07d8eb0b-bc4e-4c54-9b93-816469f37932" />
+<img width="1903" height="962" alt="image" src="https://github.com/user-attachments/assets/7b6d46c0-4972-4aa0-9bb2-a4a3e9a88aed" />
+
+<img width="1918" height="648" alt="image" src="https://github.com/user-attachments/assets/c112353c-ce53-4332-a33e-b734db242bdc" />
+
 
 </details>
 
